@@ -1,9 +1,3 @@
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
 	var	$window = $(window),
@@ -121,3 +115,33 @@
 		});
 
 })(jQuery);
+
+/* yih scripts */
+
+$(document).ready(function () {
+	appNamespace.renderWorks();  
+	// appNamespace.fadeUpCardsOnView();
+});
+ 
+// appNamespace.fadeUpCardsOnView = function() {
+
+//     $(window).scroll(function () {
+
+
+//         let wS = $(window).scrollTop(),
+//             wH = $(window).height();
+
+//             $(".exp_card, .github-card").each(function () {
+
+//             let hT = $(this).offset().top, //offset coordinates relative to the document.
+//                 hH = $(this).outerHeight() / 2; /*divide by 2 to load element once 25% of the element is in viewport*/
+
+//             if (wS > (hT + hH - wH)) {
+
+//                 $(this).css('visibility', 'visible');
+//                 $(this).addClass('animated fadeInUp');
+//             }
+
+//         });
+//     });
+// }
