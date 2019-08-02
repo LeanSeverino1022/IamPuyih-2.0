@@ -1,200 +1,151 @@
-
-.portfolio-grid {    
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-  }
-  .portfolio-grid-item {
-    /* min-width: 250px; */
-    /* max-width: 250px; */
-    /* width: 390px;     */
-    padding-left: .5rem;
-    padding-right: .5rem;
-    margin-bottom: 1rem;
-
+/* remove link underlines */
+a:link {
+    text-decoration: none ;
   }
   
-  .portfolio-grid-item img {
-    display: block;
-    max-width: 100%;
-  }
-
-  .portfolio-grid li {
-    width: calc(33% - 2em);
-    margin-left: 2em;
-    margin-top: 3em;
-    padding: 0;
-  }
-
-
-  @media screen and (max-width: 980px) {
-
-    .portfolio-grid  li {
-      width: calc(50% - 2em);
+  /*LAYOUT*/
+  
+  .portfolio-grid {    
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      list-style: none;
     }
-
-  }
-
-  @media screen and (max-width: 736px) {
-
-    .portfolio-grid {
-      width: 100%;
-      margin: 0 0 2em 0;
+    .portfolio-grid-item {
+      /* min-width: 250px; */
+      /* max-width: 250px; */
+      /* width: 390px;     */
+      padding-left: .5rem;
+      padding-right: .5rem;
+      margin-bottom: 1rem;
+      min-width: 304px;
+      max-width: 425px;
     }
-
+    
+    .portfolio-grid li {
+      width: calc(33% - .5em);
+      padding: 0;
+    }
+  
+  
+    @media screen and (max-width: 980px) {
+  
+      .portfolio-grid  li {
+        width: calc(50% - .5em);
+      }
+  
+    }
+  
+    @media screen and (max-width: 780px) { 
+      
+      .portfolio-grid {
+         justify-content: center;
+      }
+      
       .portfolio-grid li {
         width: 100%;
         margin-left: 0;
         margin-top: 2em;
-      }
-
-        
-
+      }         
+  
+    } 
+  
+  /* STYLES */
+  .card {
+      position: relative;
+      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
+      -webkit-transition: 0.300s;
+      transition: 0.300s;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      margin-bottom: 30px;
+      height: 400px;
+      background: #fff;
   }
-  /*  */
+  
+  .card-image {
+      height: 240px; 
+      overflow: hidden;
+      width: 100%;
+      background-size: cover;
+  }
+  
+  .card-desc {
+      padding: 10px 20px 0px;
+      font-size: 20px;
+      height: 150px;
+      overflow: hidden;    
+      border-top: 1px solid rgba(160,160,160,0.2);
+  }
+  
+  .card-title {
+      line-height: 2.5rem;
+  }
+  
+  /* card overlays */
+  .card-overlay {
+      -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(192, 192, 192, .4);    
+      opacity: 0;  
+  }
+  
+  .card-overlay .wrapper {
+      height: 100%;
+      width: 100%; 
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+  }      
+  
+  .card:hover .card-overlay{
+      visibility: visible;;
+      opacity: 1;
+  }
+  
+  .card-overlay-action,
+  .card-overlay-action:visited {
+      color: #fff;
+  }
+  
+  .card-overlay-action {    
+      min-width: 150px;
+      margin-top: 10px;
+      background-color: rgba(41, 40, 40, 0.7);
+      padding: 10px 16px;
+      font-size: 18px;
+      line-height: 1.3333333;
+      border-radius: 6px;
+      text-align: center;
+  }
 
-
-
-
-/*PORTFOLIO SECTION STYLES*/
-
-#portfolio {
-    padding: 0;   
-}
-
-#portfolio .container {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.github-card {
-    position: relative;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
-    -webkit-transition: 0.300s;
-    transition: 0.300s;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    margin-bottom: 30px;
-    /* visibility: hidden; purpose: animation related */
-    height: 400px;
-    background: #fff;
-}
-
-
-.github-card .card-image {
-    height: 240px; 
-    overflow: hidden;
-    width: 100%;
-    background-size: cover;
-}
-
-.card-image img {
-    height: 100%;
-    width: auto;
-}
-
-.github-card .card-content {
-    padding: 10px 20px 10px;
-    font-size: 1.5rem;
-    height: 150px;
-    overflow: hidden;    
-    border-top: 1px solid rgba(160,160,160,0.2);
-}
-
-.card-title {
-    line-height: 2.5rem;
-}
-
-/* card overlays */
-.card-overlay {
-    -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(192, 192, 192, .4);    
-    visibility: hidden;
-    opacity: 0;
-}
-
-.overlay-flex-container {
-    height: 100%;
-    width: 100%; 
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}      
-
-.github-card:hover .card-overlay{
-    visibility: visible;;
-    opacity: 1;
-}
-
-.card-overlay-action,
-.card-overlay-action:visited {
-    color: #fff;
-}
-
-.card-overlay-action{
-    min-width: 150px;
-    margin-top: 10px;
-    background-color: rgba(41, 40, 40, 0.7);
-   
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.3333333;
-    border-radius: 6px;
-}
-
-.card-overlay-action:hover{
-    background-color: rgba(41, 40, 40, 1);
-}
-
-/* card action = the icon skills found on the portfolio cards */
-.card-action {
-    padding: 1.6rem 0 0;
-}
-
-.portfolio_grid {
-    margin: 2em 0 0 0;
-}
-
-.hovereffect {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.icon-circle {
-    background-color: #F1F3F4;
-    width: 55.5px;
-    height: 55.5px;
-    /* padding: 10px 16px; */
-    border-radius: 55.5px;
-    font-size: 24px;
-    margin-right: 9px;
-}
-
-.icon-circle img{
-    width: 30px;
-    height: 30px;
-}
-
-/*-- //portfolio --*/
+  /* override */
+  #main a.card-overlay-action  {
+      color: #fff;
+  }
+  
+  .card-overlay-action:hover {
+      background-color: rgba(41, 40, 40, 1);      
+  }
+  
+  /*-- //portfolio --*/
+  

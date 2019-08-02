@@ -119,7 +119,7 @@
 /* yih scripts */
 
 $(document).ready(function () {
-	appNamespace.renderWorks();  
+	window.myPortfolio.renderWorks();  
 	// appNamespace.fadeUpCardsOnView();
 });
  
