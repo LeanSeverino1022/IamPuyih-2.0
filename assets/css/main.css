@@ -11,8 +11,9 @@
 
 
 :root {
-	--brand-color: #EDC139; 
-	--accent-color: #b392f0;
+	/* --brand-color: #EDC139;  */
+	--green-txt: #85e89d;
+	--accent-color: #422fff;
 	--secondary-bg: #24292e;
 	--primary-txt: #fff;
 	--secondary-txt: #959da5;
@@ -1969,7 +1970,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #8cc9f0;
+			background-color: var(--accent-color);
 			color: #ffffff !important;
 			box-shadow: none;
 		}
@@ -1979,7 +1980,8 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #9acff2;
+				/* background-color: #var(--accent-color); */
+				opacity: .8;
 			}
 
 			input[type="submit"].primary:active,
@@ -2207,23 +2209,23 @@ input, select, textarea {
 	}
 
 	::-webkit-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(255, 255, 255,.8) !important;
 	}
 
 	:-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(255, 255, 255,.8) !important;
 	}
 
 	::-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(255, 255, 255,.8) !important;
 	}
 
 	:-ms-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(255, 255, 255,.8) !important;
 	}
 
 	.formerize-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(255, 255, 255,.8) !important;
 	}
 
 /* Icon */
@@ -2514,6 +2516,8 @@ input, select, textarea {
 		list-style: none;
 		margin-left: -1em;
 		padding-left: 0;
+		justify-content: flex-end;
+
 	}
 
 		ul.actions li {
@@ -2636,6 +2640,7 @@ input, select, textarea {
 		ul.icons li {
 			display: inline-block;
 			padding: 0 0.65em 0 0;
+			margin-bottom: 1em;
 		}
 
 			ul.icons li:last-child {
@@ -3351,13 +3356,13 @@ input, select, textarea {
 		/* background-color: rgba(46,53,67,.8); #2E3543; */
 		/* background-color:rgba(27,31,35,.7);#1B1F23 */
 		
-		/* border: 1px solid #878787; */
-
+		border: .5px solid #878787;
+		
 		border-radius: 0.25em;
 	}
 
 		#main input, #main select, #main textarea {
-			color: #636363;
+			color: var(--primary-txt);
 		}
 
 		#main a:hover {
@@ -3427,7 +3432,7 @@ input, select, textarea {
 			#main input[type="button"].primary,
 			#main button.primary,
 			#main .button.primary {
-				background-color: #8cc9f0;
+				background-color: var(--accent-color);
 				color: #ffffff !important;
 				box-shadow: none;
 			}
@@ -3437,7 +3442,8 @@ input, select, textarea {
 				#main input[type="button"].primary:hover,
 				#main button.primary:hover,
 				#main .button.primary:hover {
-					background-color: #9acff2;
+					/* background-color:var(--accent-color); */
+					opacity: .8;
 				}
 
 				#main input[type="submit"].primary:active,
@@ -3465,8 +3471,9 @@ input, select, textarea {
 		#main input[type="email"],
 		#main select,
 		#main textarea {
-			background-color: rgba(222, 222, 222, 0.25);
-			border-color: #dddddd;
+			background-color: var(--secondary-bg);
+			border-color: var(--border);
+			color: var(--green-txt);
 		}
 
 			#main input[type="text"]:focus,
@@ -3512,23 +3519,23 @@ input, select, textarea {
 		}
 
 		#main ::-webkit-input-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: rgba(99, 99, 99, .80) !important;
 		}
 
 		#main :-moz-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: rgba(99, 99, 99, .80) !important;
 		}
 
 		#main ::-moz-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: rgba(99, 99, 99, .80) !important;
 		}
 
 		#main :-ms-input-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: rgba(99, 99, 99, .80) !important;
 		}
 
 		#main .formerize-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: rgba(99, 99, 99, .80) !important;
 		}
 
 		#main .icon.major {
@@ -3712,7 +3719,7 @@ input, select, textarea {
 	}
 
 		#footer > * {
-			width: calc(50% - 2em);
+			/* width: calc(50% - 2em); */
 			margin-left: 2em;
 		}
 
@@ -3722,6 +3729,17 @@ input, select, textarea {
 			font-size: 0.8em;
 			text-align: center;
 		}
+		
+
+		/* for large screens set icons as column */
+		@media screen and (min-width: 980px) {
+			#footer .icons {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+			}
+		}		
 
 		@media screen and (max-width: 1280px) {
 
@@ -3740,7 +3758,9 @@ input, select, textarea {
 				width: 100%;
 			}
 
-				#footer > * {
+				#footer > *,
+				#footer > .contact-form,
+				#footer > .footer-icons {
 					width: 100%;
 					margin-left: 0;
 					margin-bottom: 3em;
@@ -3798,6 +3818,26 @@ input, select, textarea {
 				max-width: 100%;
 			}
 
+		}
+
+
+		/* ADDITIONAL SECTIONS -TODO REORGANIZE LATER ON */
+		/* contact section */
+		#contact .contact-form {
+			padding: 2em;
+			/* background-image:  linear-gradient(135deg, rgba(50,52,89,1) 0%, rgba(122,108,166,1) 100%); */
+			box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+			width: 70%;
+			margin: 0 auto;
+			letter-spacing: 1.5px;
+			
+		}
+
+		#contact .contact-form input,
+		#contact .contact-form textarea {
+			background-color: transparent;
+			letter-spacing: 1.5px;
+			/* font-size: .8em; */
 		}
 
 
