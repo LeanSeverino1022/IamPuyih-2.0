@@ -3806,7 +3806,7 @@ input, select, textarea {
 		margin: 0 auto;
 	}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 736px) {
 
 			#wrapper {
 				
@@ -3831,8 +3831,7 @@ input, select, textarea {
 	/* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
 	width: 100%;
 	margin: 0 auto;
-	letter-spacing: 1.5px;
-	
+	letter-spacing: 1.5px;	
 }
 
 #contact .contact-form input,
@@ -3841,6 +3840,16 @@ input, select, textarea {
 	letter-spacing: 1.5px;
 	/* font-size: .8em; */
 }
+
+@media screen and (max-width: 480px) {
+
+	#contact .contact-form {
+		padding: 0;
+	}
+
+}
+
+
 
 
 /* helpers */
