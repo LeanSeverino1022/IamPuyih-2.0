@@ -1,5 +1,5 @@
 .skills-diagram {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
     max-width: 35em;
@@ -126,17 +126,16 @@
     line-height: 5em;
     /* background-color: rgba(109, 182, 173); */
     border-color: #ee677f;    
-    left: -5em;
+    left: -12em;
     top: -2em;
   }
-  .skills-diagram .skill-6 {
-    vertical-align: bottom;    
-    width: 3em;
-    height: 3em;
-    line-height: 3em;    
-    /* background-color: rgba(195, 192, 100); */
-    border-color: #ef934e;   
-    left:  -4.66em;
+  .skills-diagram .skill-6 { 
+     width: 3em;
+     height: 3em;
+     line-height: 3em;
+     border-color: #ef934e;
+     left: -8.66em;
+     top: -1em;
   }
   .skills-diagram .skill-7 {
     vertical-align: bottom;
