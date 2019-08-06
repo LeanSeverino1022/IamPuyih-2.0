@@ -3672,7 +3672,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#main > .main {
-				padding: 3em 1.5em 1em 1.5em ;
+				padding: 3em 1em 1em 1em ;
 			}
 
 				#main > .main > .image.main:first-child {
@@ -3809,7 +3809,8 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#wrapper {
-				max-width: calc(100% - 2em);
+				
+				max-width: calc(100%);
 			}
 
 		}
