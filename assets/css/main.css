@@ -2517,8 +2517,6 @@ input, select, textarea {
 		list-style: none;
 		margin-left: -1em;
 		padding-left: 0;
-		justify-content: flex-end;
-
 	}
 
 		ul.actions li {
@@ -3825,41 +3823,56 @@ input, select, textarea {
 		}
 
 
-		/* ADDITIONAL SECTIONS -TODO REORGANIZE LATER ON */
-		/* contact section */
-		#contact .contact-form {
-			padding: 2em;
-			/* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
-			width: 100%;
-			margin: 0 auto;
-			letter-spacing: 1.5px;
-			
-		}
+	/* YI ADDITIONAL SECTIONS / STYLES -TODO REORGANIZE LATER ON */
+/* contact section */
+#contact .contact-form {
+	padding: 2em;
+	/* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
+	width: 100%;
+	margin: 0 auto;
+	letter-spacing: 1.5px;
+	
+}
 
-		#contact .contact-form input,
-		#contact .contact-form textarea {
-			/* background-color: transparent; */
-			letter-spacing: 1.5px;
-			/* font-size: .8em; */
-		}
+#contact .contact-form input,
+#contact .contact-form textarea {
+	/* background-color: transparent; */
+	letter-spacing: 1.5px;
+	/* font-size: .8em; */
+}
 
 
-		/* helpers */
+/* helpers */
 
-		/* underline  hover links */
+/* underline  hover links */
+a.yi-link::after {
+	content: '';
+	display: block;
+	height: 2px;
+	width: 0;
+	background: var(--secondary-txt);  
+	transition: width .3s;
+	}
+	
+	li a:hover::after {
+		width: 100%;
+	}
+/* end underline  hover links */
 
-		a.yi-link::after {
-			content: '';
-			display: block;
-			height: 2px;
-			width: 0;
-			background: var(--secondary-txt);  
-			transition: width .3s;
-		  }
-		  
-		  li a:hover::after {
-			  width: 100%;
-		  }
-		/* underline  hover links */
-		
+
+/* Hearbeat animation */		
+.heartbeat {	
+	animation: beat .25s infinite alternate;
+	transform-origin: center;
+	 display: inline-block; /*coz animation not working with inline/span */
+	 color: #f97583;
+	 padding: 0 5px;
+
+}
+
+/* Heart beat animation */
+@keyframes beat{
+	to { transform: scale(1.6); }
+}
+/* end heartbeat animation */
 
