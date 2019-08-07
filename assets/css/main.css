@@ -6,7 +6,7 @@
 
 
 
-@import url(fontawesome-all.min.css);
+@import url(all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
 
@@ -2107,6 +2107,7 @@ input, select, textarea {
 				text-transform: none !important;
 				font-family: 'Font Awesome 5 Free';
 				font-weight: 900;
+				border: red 1px solid;
 			}
 
 			input[type="checkbox"] + label:before,
@@ -2127,7 +2128,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			content: '\f00c';
+			content: '\f641';
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2252,6 +2253,7 @@ input, select, textarea {
 			text-transform: none !important;
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 400;
+			border: 2px solid yellow;
 		}
 
 		.icon > .label {
