@@ -1,5 +1,7 @@
 .ps-timeline-sec {
+    color: var(--secondary-txt);
     position: relative;
+    font-size: .9em; /* smaller txt for better look */
     /* background: #000; */
   }
   .ps-timeline-sec .container {
@@ -9,7 +11,7 @@
   .ps-timeline-sec .container ol.ps-timeline {
     margin: 390px 0;
     padding: 0;
-    border-top: 2px solid #348e80;
+    border-top: 2px solid rgb(141, 42, 255);
     list-style: none;
   }
   .ps-timeline-sec .container ol.ps-timeline li {
@@ -22,13 +24,13 @@
     width: 50px;
     height: 50px;
     margin-left: -25px;
-    background: #000;
-    border: 4px solid #348e80;
+    background:  rgb(141, 42, 255);
+    border: 4px solid rgb(141, 42, 255);
     border-radius: 50%;
     box-shadow: 0 0 0 0px #000;
     text-align: center;
     line-height: 50px -10;
-    color: rgb(248, 155, 248);
+    color: rgb(252, 249, 252);
     font-size: 24px;
     font-style: normal;
     position: absolute;
@@ -38,7 +40,7 @@
   .ps-timeline-sec .container ol.ps-timeline li span.ps-sp-top:before {
 
     font-family: 'Font Awesome 5 Free'; font-weight: 900;  content: "\f30c";
-    color: #348e80; 
+    color: rgb(141, 42, 255); 
     position: absolute;
     top: -55px;
     left: 13px;
@@ -48,7 +50,7 @@
   .ps-timeline-sec .container ol.ps-timeline li span.ps-sp-bot:before {
    
     font-family: 'Font Awesome 5 Free'; font-weight: 900;  content: "\f309";
-    color: #348e80; 
+    color: rgb(141, 42, 255); 
     position: absolute;
     /* top: -50px;
     left: 13px; */
@@ -128,8 +130,9 @@
   */
   
   @media screen and (max-width: 767px) {
+    
     .ps-timeline-sec .container ol:before {
-      background: #348e80;
+      background: rgb(141, 42, 255);
       content: "";
       width: 10px;
       height: 10px;
@@ -139,20 +142,13 @@
       left: 36px !important;
     
     }
-    .ps-timeline-sec .container ol:after {
-      background: #348e80;
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 100%;
-      position: absolute;
-      top: inherit !important;
-      left: 36px;
+
     
-    }
+    /* The big screen layout was too complex. Need to remove almosta all styles first */
+
     .ps-timeline-sec .container ol.ps-timeline {
       margin: 130px 0 !important;
-      border-left: 2px solid #348e80;
+      border-left: 2px solid rgb(141, 42, 255);
       padding-left: 0 !important;
       padding-top: 120px !important;
       border-top: 0 !important;
@@ -161,31 +157,48 @@
       flex-direction: column;
     }
 
+    .xp-content {
+      position: relative;
+      top:-100px;
+    }
+
+    /**** section image and text ****/
     .ps-timeline-sec .container ol.ps-timeline li {
-      display: flex;
-      flex-direction: row;
+      /* border: red 1px solid; */
+      /* display: flex; */
+      /* flex-direction: column; */
       width: 100%;
-      height: 300px;
+      margin-bottom: 50px;
+      
+      height: auto;;
       /* position: absolute; */
     }
 
     .ps-timeline-sec .container ol.ps-timeline li .img-handler-top,
     .ps-timeline-sec .container ol.ps-timeline li .img-handler-bot {
-      position: relative;
-      width: 10%;
-      margin-left:2em;
-      opacity: .2;
+      position: static;
+      margin: 0 !important;
+      /* position: relative; */
+      /* width: 10%; */
+      margin: 0;
+      /* margin-left:2em; */
+      /* opacity: .2; */
       top: -130px;
     }
 
     .ps-timeline-sec .container ol.ps-timeline li .ps-bot,
     .ps-timeline-sec .container ol.ps-timeline li .ps-top
      {
-      position: relative;
-      top: -90px;
-      left: -50p;
+       position: static;
+       margin: 0;
+      /* position: relative; */
+      /* top: -90px;
+      left: -50p; */
     }
   
+    /**** END section image and text ****/
+
+
     .ps-timeline-sec .container ol.ps-timeline li span {
       left: 0 !important;
     }
