@@ -2253,7 +2253,6 @@ input, select, textarea {
 			text-transform: none !important;
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 400;
-			border: 2px solid yellow;
 		}
 
 		.icon > .label {
@@ -3857,6 +3856,11 @@ input, select, textarea {
 /* helpers */
 
 /* underline  hover links */
+a.yi-link {
+	display: inline-block;
+	border: 0;
+}
+
 a.yi-link::after {
 	content: '';
 	display: block;
@@ -3866,7 +3870,7 @@ a.yi-link::after {
 	transition: width .3s;
 	}
 	
-	li a:hover::after {
+	a.yi-link:hover::after {
 		width: 100%;
 	}
 /* end underline  hover links */
