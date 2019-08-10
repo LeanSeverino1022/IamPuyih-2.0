@@ -1,8 +1,3 @@
-/* 
-	colors:
-
-	#2F363D - borders
-*/
 
 
 
@@ -14,7 +9,7 @@
 	/* --brand-color: #EDC139;  */
 	--green-txt: #85e89d;
 	--accent-color: #7247c2;
-	--bright-blue: #2188ff;
+	--bright-blue: #070808;
 	--secondary-bg: #24292e;
 	--primary-txt: #fff;
 	--secondary-txt: #959da5;
@@ -114,27 +109,22 @@ input, select, textarea {
 	*, *:before, *:after {
 		box-sizing: inherit;
 	}
-
-	body {
-		background: linear-gradient(0deg, #1B1F23 90%, #52436E);		
+	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+		-moz-animation: none !important;
+		-webkit-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+		-moz-transition: none !important;
+		-webkit-transition: none !important;
+		-ms-transition: none !important;
+		transition: none !important;
 	}
-	
-		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-			-moz-animation: none !important;
-			-webkit-animation: none !important;
-			-ms-animation: none !important;
-			animation: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-			-ms-transition: none !important;
-			transition: none !important;
-		}
 
 /* Type */
 
 	body {
-		/* background-color: #313130; */
-		color: #fff;
+		background: url("http://www.script-tutorials.com/demos/360/images/stars.png"),linear-gradient(0deg, #1B1F23 90%, #52436E);		
+		color: #fff;	
 	}
 
 	body, input, select, textarea {
@@ -193,7 +183,7 @@ input, select, textarea {
 	p {
 		margin: 0 0 2em 0;
 	}
-
+		/* newspaper like column */
 		p.content {
 			-moz-columns: 20em 2;
 			-webkit-columns: 20em 2;
@@ -3087,55 +3077,43 @@ input, select, textarea {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
 
-/* Header */
-
-	#header {
-		padding: 5em 5em 1em 5em ;
+/* HOME / TOP MOST INTRO */
+	#home {
+		height: 85vh;
+	}
+	
+	.home-content {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
 		text-align: center;
+	}	
+
+	.home-content > * {
+		-moz-transition: opacity 3s ease;
+		-webkit-transition: opacity 3s ease;
+		-ms-transition: opacity 3s ease;
+		transition: opacity 3s ease;
+		-moz-transition-delay: 0.5s;
+		-webkit-transition-delay: 0.5s;
+		-ms-transition-delay: 0.5s;
+		transition-delay: 0.5s;
+		opacity: 1;
 	}
 
-		#header h1 {
-			margin: 0 0 0.25em 0;
-		}
-
-		#header p {
-			font-size: 1.25em;
-			letter-spacing: -0.025em;
-			color: var(--secondary-txt);
-		}
-
-		#header.alt {
-			padding: 7em 5em 4em 5em ;
-		}
-
-			#header.alt h1 {
-				font-size: 3.25em;
-			}
-
-			#header.alt > * {
-				-moz-transition: opacity 3s ease;
-				-webkit-transition: opacity 3s ease;
-				-ms-transition: opacity 3s ease;
-				transition: opacity 3s ease;
-				-moz-transition-delay: 0.5s;
-				-webkit-transition-delay: 0.5s;
-				-ms-transition-delay: 0.5s;
-				transition-delay: 0.5s;
-				opacity: 1;
-			}
-
-			#header.alt .logo {
-				-moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
-				-webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
-				-ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
-				transition: opacity 1.25s ease, transform 0.5s ease;
-				-moz-transition-delay: 0s;
-				-webkit-transition-delay: 0s;
-				-ms-transition-delay: 0s;
-				transition-delay: 0s;
-				display: block;
-				margin: 0 0 1.5em 0;
-			}
+	.home-content .logo {
+		-moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
+		-webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
+		-ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
+		transition: opacity 1.25s ease, transform 0.5s ease;
+		-moz-transition-delay: 0s;
+		-webkit-transition-delay: 0s;
+		-ms-transition-delay: 0s;
+		transition-delay: 0s;
+		display: block;
+		margin: 0 0 1.5em 0;
+	}
 
 				#header.alt .logo img {
 					display: block;
@@ -3216,11 +3194,11 @@ input, select, textarea {
 
 		}
 
-		body.is-preload #header.alt > * {
+		body.is-preload .home-content > * {
 			opacity: 0;
 		}
 
-		body.is-preload #header.alt .logo {
+		body.is-preload .home-content .logo {
 			-moz-transform: scale(0.8) rotate(-30deg);
 			-webkit-transform: scale(0.8) rotate(-30deg);
 			-ms-transform: scale(0.8) rotate(-30deg);
