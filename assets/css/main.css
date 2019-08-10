@@ -3780,8 +3780,8 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		width: 74em;
-		max-width: calc(100% - 4em);
+		width: 100%;
+		/* max-width: calc(100% - 4em); */
 		margin: 0 auto;
 	}
 
@@ -3828,7 +3828,12 @@ input, select, textarea {
 
 }
 
-
+/* experience section */
+#main #exp,
+#main #contact,
+#main #works {
+	background-color: #1B1F23;
+}
 
 
 /* helpers */
