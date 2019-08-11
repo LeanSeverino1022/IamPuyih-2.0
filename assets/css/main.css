@@ -9,7 +9,7 @@
 	/* --brand-color: #EDC139;  */
 	--green-txt: #85e89d;
 	--accent-color: #7247c2;
-	--bright-blue: #070808;
+	--bright-blue: #2188ff;
 	--secondary-bg: #24292e;
 	--primary-txt: #fff;
 	--secondary-txt: #959da5;
@@ -127,6 +127,7 @@ input, select, textarea {
 		color: #fff;	
 	}
 
+	
 	body, input, select, textarea {
 		font-family: "fira",mono,sans-serif;
 		font-size: 17pt;
@@ -3586,7 +3587,7 @@ input, select, textarea {
 
 		#main > .main {
 			padding: 5em 5em 3em 5em ;
-			border-top: solid 1px #dddddd;
+
 		}
 
 			#main > .main:first-child {
