@@ -3005,6 +3005,10 @@ input, select, textarea {
 				margin: 0 0 2em 0;
 			}
 
+			.spotlight .content p {
+				max-width: 600px;
+			}
+
 		.spotlight .image {
 			display: inline-block;
 			/* margin-left: 4em; */
@@ -3216,8 +3220,8 @@ input, select, textarea {
 
 		color: var(--primary-txt);
 		position: absolute;
-		width: 74em;		
-		max-width: calc(100% - 4em);
+		width: 100%;		
+		
 		padding: 1em;
 
 		background-color: var(--secondary-bg);
