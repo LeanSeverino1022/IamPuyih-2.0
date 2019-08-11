@@ -112,8 +112,8 @@ if (typeof myPortfolio === 'undefined') {
                 </div>`;
 
             $card.append($cardImage);
-            $card.append(
-                $cardContent.append($contentTitle, $cardDesc));
+            // $card.append(
+            //     $cardContent.append($contentTitle, $cardDesc));
             $card.append($cardOverlay);
 
             // return card. 1 card = 1 project
