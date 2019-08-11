@@ -3,9 +3,26 @@
 
 */
 
+$(document).ready(function () {
+    window.myPortfolio.renderWorks();
+    window.myPortfolio.enableCardOverlayOnMobile(); 
+});
+
+window.USER_IS_USING_TOUCH_DEVICE = false;
+
+try {
+    document.createEvent("TouchEvent");
+    window.USER_IS_USING_TOUCH_DEVICE = true
+ }
+ catch (e) {
+    window.USER_IS_USING_TOUCH_DEVICE = false;
+ }
+   
 if (typeof myPortfolio === 'undefined') {
     window.myPortfolio = {};
 }
+
+
 
 {
     let data = [
@@ -125,6 +142,7 @@ if (typeof myPortfolio === 'undefined') {
     /* end window.myPortfolio.renderWorks */
 }
 
+// TODO: not used yet
 myPortfolio.fadeUpCardsOnView = function() {
 
     $(window).scroll(function () {
@@ -146,4 +164,15 @@ myPortfolio.fadeUpCardsOnView = function() {
 
         });
     });
+}
+
+myPortfolio.enableCardOverlayOnMobile = function(){
+
+    if(window.USER_IS_USING_TOUCH_DEVICE) {
+      
+        $('.card').on('click', function(evt){
+            $('.card-overlay').hide();
+            $('.card-overlay', this).show();
+        })
+    }    
 }
