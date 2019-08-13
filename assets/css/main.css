@@ -1,9 +1,5 @@
-
-
-
 @import url(all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
-
 
 :root {
 	/* --brand-color: #EDC139;  */
@@ -123,7 +119,9 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background: url("http://www.script-tutorials.com/demos/360/images/stars.png"),linear-gradient(0deg, #1B1F23 90%, #52436E);		
+		/* background: url("http://www.script-tutorials.com/demos/360/images/stars.png"),linear-gradient(0deg, #1B1F23 90%, #52436E);	 */
+
+		background: linear-gradient(0deg, #1B1F23 90%, #52436E);		
 		color: #fff;	
 	}
 
@@ -3085,6 +3083,13 @@ input, select, textarea {
 /* HOME / TOP MOST INTRO */
 	#home {
 		height: 85vh;
+		transition: all 1s ease;
+	}
+
+	body.is-preload #home {
+		background-color: #000;
+		opacity: 1;
+		height: 100vh;
 	}
 	
 	.home-content {
@@ -3093,6 +3098,7 @@ input, select, textarea {
 		top: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
+		min-width: 300px;
 	}	
 
 	.home-content > * {
@@ -3199,15 +3205,11 @@ input, select, textarea {
 
 		}
 
-		body.is-preload .home-content > * {
+		/* body.is-preload .home-content h1, */
+		body.is-preload .home-content h1,
+		body.is-preload .home-content p
+		 {
 			opacity: 0;
-		}
-
-		body.is-preload .home-content .logo {
-			-moz-transform: scale(0.8) rotate(-30deg);
-			-webkit-transform: scale(0.8) rotate(-30deg);
-			-ms-transform: scale(0.8) rotate(-30deg);
-			transform: scale(0.8) rotate(-30deg);
 		}
 
 /* Nav */

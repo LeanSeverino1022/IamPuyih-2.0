@@ -10,7 +10,7 @@ particlesJS("particles-js", {
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#85e89d"
       },
       "shape": {
         "type": "circle",
@@ -111,4 +111,63 @@ particlesJS("particles-js", {
     "retina_detect": true
   });
   
+
+function runLogoAnimation(){
   
+  // ANIMATED LOGO
+  const svgPath = document.querySelectorAll('path');
+
+  const svgText = anime({
+    targets: ['rect.logo-border'],
+
+    easing: 'easeInOutSine',
+    delay: 3000,
+    duration: 1500,
+    // direction: 'alternate',
+    // loop: true, 
+    opacity: 1,
+    complete: function(){
+      $('body').removeClass('is-preload');
+    }
+  });
+
+
+  anime({
+    targets: ['#svg_25'],
+    easing: 'easeInOutSine',
+
+    duration: 700,
+    strokeDashoffset: [anime.setDashoffset, 0],
+  })
+
+  // THE S
+  anime({
+    targets: ['#svg_28', '#svg_31'],
+
+    easing: 'easeInOutSine',
+    duration: 700,
+    delay: 1500,
+    strokeDashoffset: [anime.setDashoffset, 0],
+  })
+
+  const container = anime({
+    targets: ['svg#my_logo'],
+
+    easing: 'easeInOutSine',
+    rotate: [
+      { value: -45, duration: 0, delay: 1100 },
+      { value: 45, duration: 700 },
+      { value: 0, duration: 700, delay: 1000 },
+    ],
+    // scaling start with large font and scale to 1 when done
+    scale: [
+      { value: 2, delay: 0, duration : 1 },
+      { value: 1, delay: 4500, duration: 1000 },       
+    ],
+
+    opacity: 1
+   
+    // loop: true,
+    // opacity: .1, 
+  });
+}
