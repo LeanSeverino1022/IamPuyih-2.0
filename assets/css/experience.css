@@ -1,7 +1,7 @@
 .ps-timeline-sec {
     color: var(--secondary-txt);
     position: relative;
-    font-size: .9em; /* smaller txt for better look */
+    
     /* background: #000; */
   }
   .ps-timeline-sec .container {
