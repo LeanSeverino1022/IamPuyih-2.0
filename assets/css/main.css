@@ -124,7 +124,7 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background: url("http://www.script-tutorials.com/demos/360/images/stars.png"),linear-gradient(0deg, #1B1F23 90%, #52436E);	
+		background: url("../../images/stars.png"),linear-gradient(0deg, #1B1F23 90%, #52436E);	
 
 		/* background: linear-gradient(0deg, #1B1F23 90%, #52436E);		 */
 		color: #fff;	
