@@ -124,9 +124,9 @@ input, select, textarea {
 /* Type */
 
 	body {
-		/* background: url("http://www.script-tutorials.com/demos/360/images/stars.png"),linear-gradient(0deg, #1B1F23 90%, #52436E);	 */
+		background: url("http://www.script-tutorials.com/demos/360/images/stars.png"),linear-gradient(0deg, #1B1F23 90%, #52436E);	
 
-		background: linear-gradient(0deg, #1B1F23 90%, #52436E);		
+		/* background: linear-gradient(0deg, #1B1F23 90%, #52436E);		 */
 		color: #fff;	
 	}
 
@@ -3117,7 +3117,6 @@ input, select, textarea {
 		top: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
-		width: 80%;
 		min-width: 300px;
 	}	
 
@@ -3146,15 +3145,11 @@ input, select, textarea {
 		margin: 0 0 1.5em 0;
 	}
 
-	@media screen and (max-width: 480px) {
-
-	}
-
-	#header.alt .logo img {
-		display: block;
-		margin: 0 auto;
-		max-width: 75%;
-	}
+				#header.alt .logo img {
+					display: block;
+					margin: 0 auto;
+					max-width: 75%;
+				}
 
 		@media screen and (max-width: 1280px) {
 
