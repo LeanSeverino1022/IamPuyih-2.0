@@ -9,6 +9,8 @@
 @media screen and (max-width: 1020px) {
     .skills-diagram {
         font-size: 15px;   
+        /* add vert space */
+        margin-top: 3em;
       }
 }
 
