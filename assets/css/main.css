@@ -116,6 +116,11 @@ input, select, textarea {
 		transition: none !important;
 	}
 
+	/* for animation, prevents scroll if preload */
+	body.is-preload{
+		overflow: hidden;
+	}
+
 /* Type */
 
 	body {
@@ -124,6 +129,8 @@ input, select, textarea {
 		/* background: linear-gradient(0deg, #1B1F23 90%, #52436E);		 */
 		color: #fff;	
 	}
+
+
 
 	
 	body, input, select, textarea {
