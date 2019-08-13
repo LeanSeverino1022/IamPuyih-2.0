@@ -1,264 +1,247 @@
-(function($) {
+(function ($) {
 
-	var	$window = $(window),
-		$body = $('body'),
-		$main = $('#main');
+  var $window = $(window),
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ '361px',   '480px'  ],
-			xxsmall:  [ null,      '360px'  ]
-		});
+    $main = $('#main');
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+  // Breakpoints.
+  breakpoints({
+    xlarge: ['1281px', '1680px'],
+    large: ['981px', '1280px'],
+    medium: ['737px', '980px'],
+    small: ['481px', '736px'],
+    xsmall: ['361px', '480px'],
+    xxsmall: [null, '360px']
+  });
 
-	// Nav.
-		var $nav = $('#nav');
+  // Play initial animations on page load.
+  $window.on('load', function () {
+    window.setTimeout(function () {
+      runLogoAnimation();
 
-		if ($nav.length > 0) {
+    }, 100);
+  });
 
-			// Shrink effect.
-				$main
-					.scrollex({
-						mode: 'top',
-						enter: function() {
-							$nav.addClass('alt');
-						},
-						leave: function() {
-							$nav.removeClass('alt');
-						},
-					});
+  // Nav.
+  var $nav = $('#nav');
 
-			// Links.
-				var $nav_a = $nav.find('a');
+  if ($nav.length > 0) {
 
-				$nav_a
-					.scrolly({
-						speed: 1000,
-						offset: function() { return $nav.height(); }
-					})
-					.on('click', function() {
+    // Shrink effect.
+    $main
+      .scrollex({
+        mode: 'top',
+        enter: function () {
+          $nav.addClass('alt');
+        },
+        leave: function () {
+          $nav.removeClass('alt');
+        },
+      });
 
-						var $this = $(this);
+    // Links.
+    var $nav_a = $nav.find('a');
 
-						// External link? Bail.
-							if ($this.attr('href').charAt(0) != '#')
-								return;
+    $nav_a
+      .scrolly({
+        speed: 1000,
+        offset: function () { return $nav.height(); }
+      })
+      .on('click', function () {
 
-						// Deactivate all links.
-							$nav_a
-								.removeClass('active')
-								.removeClass('active-locked');
+        var $this = $(this);
 
-						// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-							$this
-								.addClass('active')
-								.addClass('active-locked');
+        // External link? Bail.
+        if ($this.attr('href').charAt(0) != '#')
+          return;
 
-					})
-					.each(function() {
+        // Deactivate all links.
+        $nav_a
+          .removeClass('active')
+          .removeClass('active-locked');
 
-						var	$this = $(this),
-							id = $this.attr('href'),
-							$section = $(id);
+        // Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+        $this
+          .addClass('active')
+          .addClass('active-locked');
 
-						// No section for this link? Bail.
-							if ($section.length < 1)
-								return;
+      })
+      .each(function () {
 
-						// Scrollex.
-							$section.scrollex({
-								mode: 'middle',
-								initialize: function() {
+        var $this = $(this),
+          id = $this.attr('href'),
+          $section = $(id);
 
-									// Deactivate section.
-										if (browser.canUse('transition'))
-											$section.addClass('inactive');
+        // No section for this link? Bail.
+        if ($section.length < 1)
+          return;
 
-								},
-								enter: function() {
+        // Scrollex.
+        $section.scrollex({
+          mode: 'middle',
+          initialize: function () {
 
-									// Activate section.
-										$section.removeClass('inactive');
+            // Deactivate section.
+            if (browser.canUse('transition'))
+              $section.addClass('inactive');
 
-									// No locked links? Deactivate all links and activate this section's one.
-										if ($nav_a.filter('.active-locked').length == 0) {
+          },
+          enter: function () {
 
-											$nav_a.removeClass('active');
-											$this.addClass('active');
+            // Activate section.
+            $section.removeClass('inactive');
 
-										}
+            // No locked links? Deactivate all links and activate this section's one.
+            if ($nav_a.filter('.active-locked').length == 0) {
 
-									// Otherwise, if this section's link is the one that's locked, unlock it.
-										else if ($this.hasClass('active-locked'))
-											$this.removeClass('active-locked');
+              $nav_a.removeClass('active');
+              $this.addClass('active');
 
-								}
-							});
+            }
 
-					});
+            // Otherwise, if this section's link is the one that's locked, unlock it.
+            else if ($this.hasClass('active-locked'))
+              $this.removeClass('active-locked');
 
-		}
+          }
+        });
 
-	// Scrolly.
-		$('.scrolly').scrolly({
-			speed: 1000
-		});
+      });
+
+  }
+
+  // Scrolly.
+  $('.scrolly').scrolly({
+    speed: 1000
+  });
+
+  /* yih scripts */
+
+  $(document).ready(function () {
+    window.myPortfolio.renderWorks();
+    // appNamespace.fadeUpCardsOnView();
+
+
+    // test... add to own file fa-jack-o-lantern/* ---- particles.js config ---- */
+
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+
+
+
+  });
+
 
 })(jQuery);
 
-/* yih scripts */
-
-$(document).ready(function () {
-	window.myPortfolio.renderWorks();  
-	// appNamespace.fadeUpCardsOnView();
 
 
-	// test... add to own file fa-jack-o-lantern/* ---- particles.js config ---- */
-
-particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 80,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 3,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 6,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 140,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true
-  });
-  
-  
-
-});
- 
-// appNamespace.fadeUpCardsOnView = function() {
-
-//     $(window).scroll(function () {
-
-
-//         let wS = $(window).scrollTop(),
-//             wH = $(window).height();
-
-//             $(".exp_card, .github-card").each(function () {
-
-//             let hT = $(this).offset().top, //offset coordinates relative to the document.
-//                 hH = $(this).outerHeight() / 2; /*divide by 2 to load element once 25% of the element is in viewport*/
-
-//             if (wS > (hT + hH - wH)) {
-
-//                 $(this).css('visibility', 'visible');
-//                 $(this).addClass('animated fadeInUp');
-//             }
-
-//         });
-//     });
-// }
+// ani
