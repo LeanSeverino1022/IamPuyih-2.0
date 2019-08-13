@@ -53,7 +53,7 @@ if (typeof myPortfolio === 'undefined') {
             title: 'Sink-em Game',
             description:'Game created with ImpactJS, a JavaScript Game Engine ',
             url: 'https://css-tricks.com/video-screencasts/',
-            img: '../images/gallery/sinkem-game.png',
+            img: '../images/gallery/sinkem-game.jpg',
             actionLinks: {                 
                 "Play Game" : "https://puyihsdumpsite.000webhostapp.com/game/index.html",
                 "View source on Github" : "https://github.com/LeanSeverino1022/sink-Em/blob/master/README.markdown"
@@ -73,7 +73,7 @@ if (typeof myPortfolio === 'undefined') {
             // description: 'Certificate curriculum should take approximately 300 hours to complete and includes 5 required projects.',
             description: '',
             url: 'https://css-tricks.com/video-screencasts/',
-            img: 'images/gallery/certificate-webdesign.png',
+            img: 'images/gallery/fcc.jpg',
             actionLinks: { 
                 "View verified certificate" : "https://www.freecodecamp.org/certification/leanseverino1022/javascript-algorithms-and-data-structures"              
             }
@@ -82,7 +82,7 @@ if (typeof myPortfolio === 'undefined') {
             title: 'Responsive Web Design Certification',
             description: '',
             url: 'https://css-tricks.com/video-screencasts/',
-            img: 'images/gallery/certificate-algo.png',
+            img: 'images/gallery/prod-visual.jpg',
             actionLinks: { 
                 "View verified certificate" : "https://www.freecodecamp.org/certification/leanseverino1022/responsive-web-design"
             }
@@ -129,8 +129,8 @@ if (typeof myPortfolio === 'undefined') {
                 </div>`;
 
             $card.append($cardImage);
-            // $card.append(
-            //     $cardContent.append($contentTitle, $cardDesc));
+            $card.append(
+                $cardContent.append($contentTitle, $cardDesc));
             $card.append($cardOverlay);
 
             // return card. 1 card = 1 project

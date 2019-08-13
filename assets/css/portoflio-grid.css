@@ -15,7 +15,9 @@ a:link {
 
     li.portfolio-grid-item {
       margin: 0;    
-      width: 390px;
+      width: 33.33%;
+      max-width: 400px;
+ 
       height: 100%;
       padding: 5px !important;
       overflow: hidden;
@@ -30,7 +32,7 @@ a:link {
       transition: 0.300s;
       -webkit-transition: 0.3s;
       transition: 0.3s; 
-      background: #fff;
+      background: #24292E;
   }
   
   .card-image {
@@ -43,7 +45,6 @@ a:link {
   
   .card-desc {
       padding: 10px 20px 0px;
-      font-size: 20px;
       height: 150px;
       overflow: hidden;    
       border-top: 1px solid rgba(160,160,160,0.2);
@@ -119,25 +120,24 @@ a:link {
 
     /*MEDIA QUERIES  */
   
-  @media screen and (max-width: 980px) {
+  @media screen and (max-width: 1045px) {
   
     .portfolio-grid  li {
         width: 50%;
     }
 
     .card-image {
-        max-height: 240px;    
+        /* max-height: 240px;    
         width: 100%;
-        background-size: cover;
+        background-size: cover; */
     }
 
   }
 
-  @media screen and (max-width: 450px) { 
+  @media screen and (max-width: 700px) { 
     
       .portfolio-grid  li {
           width: 100%;
-          max-width: 100%;
       }  
   } 
 

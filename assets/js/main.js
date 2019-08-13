@@ -118,7 +118,6 @@
   /* yih scripts */
 
   $(document).ready(function () {
-    window.myPortfolio.renderWorks();
     // appNamespace.fadeUpCardsOnView();
 
 
