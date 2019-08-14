@@ -16,9 +16,9 @@
 
   // Play initial animations on page load.
   $window.on('load', function () {
+
     window.setTimeout(function () {
       runLogoAnimation();
-
     }, 100);
   });
 
@@ -119,10 +119,9 @@
 
   $(document).ready(function () {
     // appNamespace.fadeUpCardsOnView();
+    editNodePopover.init();
 
-
-    // test... add to own file fa-jack-o-lantern/* ---- particles.js config ---- */
-
+    //  ---- particles.js config ---- */
     particlesJS("particles-js", {
       "particles": {
         "number": {
@@ -234,13 +233,44 @@
       "retina_detect": true
     });
 
-
-
-  });
-
+  }); 
 
 })(jQuery);
 
 
 
 // ani
+
+
+var editNodePopover = {
+  DOM: {},
+
+  init: function () {        
+      // cache dom      
+      this.DOM.container = $(".node-update-popover");
+      this.DOM.content = $('.content', this.DOM.$container);
+  },
+
+  show: function (index) {
+      
+    this.DOM.container.popup({
+
+      color: "rgba(99, 76, 161)",
+      // color: 'white',
+      opacity: .8,
+      transition: '0.3s',
+      scrolllock: true,
+      // blur: false,
+      autoopen: true,
+    
+      closeelement: '.popover-close',
+      // escape: false,
+
+      onopen: function () {
+        editNodePopover.DOM.content.html( window.overlayData[index].content );   
+      },
+
+    });
+  },  
+
+};

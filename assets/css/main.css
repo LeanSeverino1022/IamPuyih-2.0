@@ -124,13 +124,11 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background: url("../../images/stars.png"),linear-gradient(0deg, #1B1F23 90%, #52436E);	
+		/* background: url("http://www.script-tutorials.com/demos/360/images/stars.png"),linear-gradient(0deg, #1B1F23 90%, #52436E);	 */
 
-		/* background: linear-gradient(0deg, #1B1F23 90%, #52436E);		 */
+		background: linear-gradient(0deg, #1B1F23 90%, #52436E);		
 		color: #fff;	
 	}
-
-
 
 	
 	body, input, select, textarea {
@@ -3870,19 +3868,43 @@ a.yi-link {
 	border: 0;
 }
 
+a.yi-link {
+	display: inline-block;
+	border: 0;
+}
+
 a.yi-link::after {
 	content: '';
 	display: block;
 	height: 2px;
 	width: 0;
-	background: var(--secondary-txt);  
+	background: var(--green-txt);  
 	transition: width .3s;
-	}
+}
 	
 	a.yi-link:hover::after {
 		width: 100%;
 	}
 /* end underline  hover links */
+
+ .fr {
+	 float: right;
+ }
+
+ .fl {
+	 float: left;
+ }
+
+ .txt-green {
+	 color: var(--green-txt)
+ }
+ #main .txt-green:hover {
+	 color: var(--green-txt)
+ }
+ 
+
+/* end helpers */
+
 
 
 /* Hearbeat animation */		
@@ -3901,3 +3923,21 @@ a.yi-link::after {
 }
 /* end heartbeat animation */
 
+.node-update-popover{
+    display: none;
+	background: #412F79;
+	width: 60%;
+	max-width: 500px;
+	min-width: 280px;
+	padding: 1em;
+	font-size: 1.2em;
+	color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+	
+	.node-update-popover {
+		width: 84%;
+	}
+
+}

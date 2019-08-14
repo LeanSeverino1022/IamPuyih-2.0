@@ -6,6 +6,8 @@
 $(document).ready(function () {
     window.myPortfolio.renderWorks();
     window.myPortfolio.enableCardOverlayOnMobile(); 
+
+   
 });
 
 window.USER_IS_USING_TOUCH_DEVICE = false;
@@ -25,24 +27,43 @@ if (typeof myPortfolio === 'undefined') {
 
 
 {
-    let data = [
+    const data = [
         {
-            title: 'Search and Filter React Boilerplate',
-            description:'Easy to edit template for search & filter React projects.',
-            url: 'https://css-tricks.com/video-screencasts/',
-            img: 'images/gallery/search-filter-react.png',
-            skills: ['react', 'html', 'css', 'javascript'],
+            title: null,
+            description:'ResultMaps is an application that helps teams and people to create clear roadmaps to track tasks and focus on results.',
+            class: ["open-overlay"], //custom class
+            img: 'images/gallery/rm.jpg',
             actionLinks: { 
                 // {[name of the button] : [link]} 
-                "View Online" : "https://leanseverino1022.github.io/search-and-filter-with-react/",
+                "Learn more" : "javascript:editNodePopover.show(0);",
                 "View Source on Github" : "https://github.com/LeanSeverino1022/search-and-filter-with-react"
             }
             
         },
         {
+            
+            title: null,
+            description: "EverThread is a visualization platform. I've helped the company develop tools that give customers the ability to customize products across categories in a virtual environment.",
+            class: [], //custom class
+            img: 'images/gallery/prod-visual.jpg',
+            actionLinks: { 
+                "Learn more" : "./product-demo.html"
+            }
+        }, 
+        {
+            title: 'Interactive Tree Diagram',
+            description:'visually represent data hierarchy in a tree-like structure. Features include switching orientation, zooming & panning, etc. ',
+            class: [], //custom class
+            img: 'images/gallery/tree.jpg',
+            actionLinks: { 
+                 "View Demo" : "https://leanseverino1022.github.io/tree-diagram/"
+            }
+        },
+     
+        {
             title: 'Drag-to-scroll library',
             description:'Tiny Library to easily enable click and drag scrolling to any content. Scroll just like how you do it on a tablet or smartphone',
-            url: 'https://css-tricks.com/video-screencasts/',
+            class: [], //custom class
             img: 'images/gallery/dragtoscroll.png',
             actionLinks: {                 
                 "View Online" : "https://leanseverino1022.github.io/dragToScroll/",
@@ -50,9 +71,8 @@ if (typeof myPortfolio === 'undefined') {
             }
         },
         {
-            title: 'Sink-em Game',
-            description:'Game created with ImpactJS, a JavaScript Game Engine ',
-            url: 'https://css-tricks.com/video-screencasts/',
+            description:"Created a game with ImpactJS, a JavaScript Game Engine. I had to replace / remove the original assets becaue I cannot use them for my personal portfolio.",
+            class: [], //custom class
             img: '../images/gallery/sinkem-game.jpg',
             actionLinks: {                 
                 "Play Game" : "https://puyihsdumpsite.000webhostapp.com/game/index.html",
@@ -60,39 +80,40 @@ if (typeof myPortfolio === 'undefined') {
             }
         },
         {
-            title: 'Live Product Customizer',
-            description:'This feature allows customers to customize a product with a live preview. Used in multiple projects(e.g., living-room, clothing, and kitchen).',
-            url: 'https://css-tricks.com/video-screencasts/',
-            img: 'images/gallery/custom-clothes.png',
+            title: 'Search and Filter React Boilerplate',
+            description:'Easy to edit template for search & filter React projects.',
+            class: [], //custom class
+            img: 'images/gallery/search-filter-react.png',
             actionLinks: { 
-                 "View Demo" : "../pages/product-demo.html"
+                // {[name of the button] : [link]} 
+                "View Online" : "https://leanseverino1022.github.io/search-and-filter-with-react/",
+                "View Source on Github" : "https://github.com/LeanSeverino1022/search-and-filter-with-react"
             }
+            
         },
-        {
-            title: 'JavaScript Algorithms and Data Structures Certification',
-            // description: 'Certificate curriculum should take approximately 300 hours to complete and includes 5 required projects.',
-            description: '',
-            url: 'https://css-tricks.com/video-screencasts/',
-            img: 'images/gallery/fcc.jpg',
-            actionLinks: { 
-                "View verified certificate" : "https://www.freecodecamp.org/certification/leanseverino1022/javascript-algorithms-and-data-structures"              
-            }
-        },
-        {
-            title: 'Responsive Web Design Certification',
-            description: '',
-            url: 'https://css-tricks.com/video-screencasts/',
-            img: 'images/gallery/prod-visual.jpg',
-            actionLinks: { 
-                "View verified certificate" : "https://www.freecodecamp.org/certification/leanseverino1022/responsive-web-design"
-            }
-        } 
+        
+        // {
+        //     title: 'freeCodeCamp Certifications',
+        //     // description: 'Certificate curriculum should take approximately 300 hours to complete and includes 5 required projects.',
+        //     description: '',
+        //     class: [], //custom class
+        //     img: 'images/gallery/fcc.jpg',
+        //     actionLinks: { 
+        //         "Algorithms and Data Structures" : "https://www.freecodecamp.org/certification/leanseverino1022/javascript-algorithms-and-data-structures",
+        //         'Responsive Web Design' : 'https://www.freecodecamp.org/certification/leanseverino1022/responsive-web-design'             
+        //     }
+        // },
+    
     ];
+
+    window.overlayData = [{
+        content: "<p><a target='_blank' class='yi-link txt-green' href='https://www.resultmaps.com/'>Resultmaps</a> is a peak performance platform. An application designed to help individuals, teams, and teams of teams. I'm a long-time member of the team and I have contributed to the development of different tools such as Gantt chart, kanban boards, etc. I also lead the development of the main mindmap / tree diagram feature. I'm mostly used to work on old and new Javascript-heavy projects and fix existing complex css issues.</p>",
+    }]
 
     window.myPortfolio.renderWorks = function() {
         const works = data.map(function(item) {
             const $outerDiv = $('<li>').attr({
-                class: 'portfolio-grid-item'
+                class: 'portfolio-grid-item ' + `${item.class.length ? item.class.join(" "): ""}`,
             });
 
             const $card = $('<div>').attr({
@@ -100,9 +121,9 @@ if (typeof myPortfolio === 'undefined') {
             });
 
             const $cardImage = $('<div>')
-                .attr({ class: 'card-image' })
-                .css('background-image', `url(${item.img})`);
-            // const $img = $('<img>').attr({
+                .attr({ class: 'card-image' })       
+                .css('background-image', `url(${item.img})`);   
+                // const $img = $('<img>').attr({
             //     alt: 'github-ss',
             //     src: item.img
             // });
@@ -138,9 +159,13 @@ if (typeof myPortfolio === 'undefined') {
         });
 
         $('.portfolio-grid').append(works);
+
+
+        $( document ).trigger("galleryHasRendered");
     };
     /* end window.myPortfolio.renderWorks */
 }
+
 
 // TODO: not used yet
 myPortfolio.fadeUpCardsOnView = function() {
@@ -176,3 +201,9 @@ myPortfolio.enableCardOverlayOnMobile = function(){
         })
     }    
 }
+
+
+$(document).on('galleryHasRendered', function(e){
+    // for overlay triggers, no need to open new window
+    document.querySelectorAll('.open-overlay .card-overlay-action').forEach( el => {el.target = "_self"; });
+})
