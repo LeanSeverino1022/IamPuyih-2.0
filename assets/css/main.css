@@ -118,7 +118,7 @@ input, select, textarea {
 
 	/* for animation, prevents scroll if preload */
 	body.is-preload{
-		overflow: hidden;
+		/* overflow: hidden; */
 	}
 
 /* Type */
