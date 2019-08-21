@@ -2,6 +2,11 @@
 body{
     background: none;
 }
+
+#wrapper {
+  width: 100%;
+}
+
 #main {
     background: #1B1F23;    
 }
