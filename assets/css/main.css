@@ -3106,7 +3106,6 @@ input, select, textarea {
 	body.is-preload #home {
 		background-color: #000;
 		opacity: 1;
-		height: 100vh;
 	}
 	
 	.home-content {
