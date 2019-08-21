@@ -12,8 +12,8 @@
 	--border: #2F363D;
   }
 
-  /* 540D6E */
-  
+  /* 540D6E */  
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -3239,7 +3239,8 @@ input, select, textarea {
 
 		color: var(--primary-txt);
 		position: absolute;
-		width: 100%;		
+		width: 100%;	
+		max-width: 1500px;	
 		
 		padding: 1em;
 
@@ -3380,7 +3381,7 @@ input, select, textarea {
 		}
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
-			color: var(--primary-text);
+			color: #fff
 		}
 
 		#main blockquote {
@@ -3805,7 +3806,7 @@ input, select, textarea {
 
 	#wrapper {
 		width: 100%;
-		/* max-width: calc(100% - 4em); */
+		max-width: 1500px;
 		margin: 0 auto;
 	}
 
@@ -3923,20 +3924,24 @@ a.yi-link::after {
 }
 /* end heartbeat animation */
 
-.node-update-popover{
+/* 1. GALLERY MODALS */
+.gallery-modal{
     display: none;
 	background: #412F79;
 	width: 60%;
 	max-width: 500px;
 	min-width: 280px;
 	padding: 1em;
-	font-size: 1.2em;
 	color: #fff;
+}
+
+.gallery-modal .content p {
+	font-size: 1.2em;
 }
 
 @media screen and (max-width: 700px) {
 	
-	.node-update-popover {
+	.gallery-modal {
 		width: 84%;
 	}
 

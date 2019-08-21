@@ -35,8 +35,7 @@ if (typeof myPortfolio === 'undefined') {
             img: 'images/gallery/rm.jpg',
             actionLinks: { 
                 // {[name of the button] : [link]} 
-                "Learn more" : "javascript:editNodePopover.show(0);",
-                "View Source on Github" : "https://github.com/LeanSeverino1022/search-and-filter-with-react"
+                "Learn more" : "javascript:galleryModal.show(0);",
             }
             
         },
@@ -73,7 +72,7 @@ if (typeof myPortfolio === 'undefined') {
         {
             description:"Created a game with ImpactJS, a JavaScript Game Engine. I had to replace / remove the original assets becaue I cannot use them for my personal portfolio.",
             class: [], //custom class
-            img: '../images/gallery/sinkem-game.jpg',
+            img: 'images/gallery/sinkem-game.jpg',
             actionLinks: {                 
                 "Play Game" : "https://puyihsdumpsite.000webhostapp.com/game/index.html",
                 "View source on Github" : "https://github.com/LeanSeverino1022/sink-Em/blob/master/README.markdown"
@@ -107,7 +106,7 @@ if (typeof myPortfolio === 'undefined') {
     ];
 
     window.overlayData = [{
-        content: "<p><a target='_blank' class='yi-link txt-green' href='https://www.resultmaps.com/'>Resultmaps</a> is a peak performance platform. An application designed to help individuals, teams, and teams of teams. I'm a long-time member of the team and I have contributed to the development of different tools such as Gantt chart, kanban boards, etc. I also lead the development of the main mindmap / tree diagram feature. I'm mostly used to work on old and new Javascript-heavy projects and fix existing complex css issues.</p>",
+        content: "<h1><a target='_blank' class='yi-link txt-green' href='https://www.resultmaps.com/'>Resultmaps</a></h1><p>is a peak performance platform. An application designed to help individuals, teams, and teams of teams. I'm a long-time member of the team and I have contributed to the development of different tools such as Gantt chart, kanban boards, etc. I also lead the development of the main mindmap / tree diagram feature. I'm mostly used to work on old and new Javascript-heavy projects and fix existing complex css issues.</p>",
     }]
 
     window.myPortfolio.renderWorks = function() {

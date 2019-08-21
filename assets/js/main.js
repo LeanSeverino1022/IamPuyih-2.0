@@ -119,7 +119,7 @@
 
   $(document).ready(function () {
     // appNamespace.fadeUpCardsOnView();
-    editNodePopover.init();
+    galleryModal.init();
 
     //  ---- particles.js config ---- */
     particlesJS("particles-js", {
@@ -238,17 +238,13 @@
 })(jQuery);
 
 
-
-// ani
-
-
-var editNodePopover = {
+var galleryModal = {
   DOM: {},
 
   init: function () {        
       // cache dom      
-      this.DOM.container = $(".node-update-popover");
-      this.DOM.content = $('.content', this.DOM.$container);
+      this.DOM.container = $(".gallery-modal");
+      this.DOM.content = $('.gallery-modal .content');
   },
 
   show: function (index) {
@@ -257,7 +253,7 @@ var editNodePopover = {
 
       color: "rgba(99, 76, 161)",
       // color: 'white',
-      opacity: .8,
+      opacity: .9,
       transition: '0.3s',
       scrolllock: true,
       // blur: false,
@@ -267,7 +263,7 @@ var editNodePopover = {
       // escape: false,
 
       onopen: function () {
-        editNodePopover.DOM.content.html( window.overlayData[index].content );   
+        galleryModal.DOM.content.html( window.overlayData[index].content );   
       },
 
     });
