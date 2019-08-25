@@ -1,43 +1,32 @@
 .skills-diagram {
-  
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-
+    max-width: 35em;
     width: max-content;
-          /* box-shadow: inset 0 0 50px rgba(62, 40, 110, 1); */
-    /* border: 1px solid grey !important; */
-    width: 500px;
-    height: 500px;
-  border-radius: 50%;
-   /* min-width: 300px; */
-   /* height: auto; */
-  /* height: 500px; */
-
- 
-  
   }
 
 @media screen and (max-width: 1020px) {
     .skills-diagram {
+        font-size: 15px;   
+        /* add vert space */
+        margin-top: 3em;
       }
 }
 
 @media screen and (max-width: 650px) {
     .skills-diagram {
-        /* font-size: 12px;    */
+        font-size: 12px;   
       }
 }
 @media screen and (max-width: 500px) {
     .skills-diagram {
         font-size: 10px;   
-        width: 300px;
-        height: 300px;
       }
 }
 @media screen and (max-width: 400px) {
     .skills-diagram {
-        /* font-size: 8px;    */
+        font-size: 8px;   
       }
 }
 
@@ -59,28 +48,24 @@
 
   .skills-diagram .item {
     position: relative;
-  color: rgb(153, 248, 190);
+    color: #fff !important;
     display: inline-block;
     vertical-align: top;
-    /* text-shadow:  0 0 30px rgba(38, 3, 236, 0.42); */
     
-    /* border-style: solid; */
+    border-style: solid;
     border-width: 2px;
     border-radius: 50%;
-    font-size: 1.5em;
-/*     
+    
     -webkit-transform: scale(1.2);
       -moz-transform: scale(1.2);
       -o-transform: scale(1.2);
       -ms-transform: scale(1.2);
-      transform: scale(1.2); */
-
-      /* box-shadow: inset 0 0 50px rgb(68, 52, 102); */
-
+      transform: scale(1.2);
     
     /* set defaults to skill-2 */
-    /* font-size: 1.2em !important; */
-
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
     opacity: .7; 
   }
   
@@ -97,144 +82,100 @@
   
   /* Provide different sizes */
   .skills-diagram .skill-1 {
-    top: 14em;
-    left: 3em;
-
-    
-    /* vertical-align: bottom;
-    width: 5em;
-    height:5em;
-    line-height: 5em;     */
+    vertical-align: bottom;
+    width: 4em;
+    height:4em;
+    line-height: 4em;    
     /* background-color: rgba(201, 155, 129); */
-    /* border-color: #85e89d;    
-    left: 0;
-    top: 0; */
+    border-color: #85e89d;    
+    left: 1.33em;
+    top: 2.66em;
    
   }
   .skills-diagram .skill-2 {
-    top: 3em;
-    left: 2em;
-    /* width: 5em;
-    height: 5em;
-    line-height: 5em;
-    left: 1em; 
-    top:8.33em;      */
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+    left: 1.5em;
+    top:5.33em;    
     /* background-color: rgba(201, 155, 129); */
-    /* border-color: #83c2b1;     */
+    border-color: #83c2b1;    
   }
 
 
   .skills-diagram .skill-3 {
-    top: .5em;
-    left: -2em;
-  
-    /* vertical-align: bottom;    
+    vertical-align: bottom;    
     width: 7em;
     height: 7em;
-    line-height: 7em; */
+    line-height: 7em;
     /* background-color: rgba(138, 138, 140); */
-    /* border-color: #dedc7c;    
-  top: 8.6em;
-    left: 1em; */
+    border-color: #dedc7c;    
+    top: 4.6em;
+    left: .16em;
+    z-index: 1;
   }
-  /* html5 */
   .skills-diagram .skill-4 {
-    top: 3em;
-    left: -1.5em;
-    font-size: 2.5em;
-    /* width: 10em;
+    width: 10em;
     height: 10em;
-    line-height: 10em;     */
+    line-height: 10em;    
     /* background-color: rgba(234, 112, 97); */
-    /* border-color: #cb7c75;     */
-    /* top: 2.67em; */
+    border-color: #cb7c75;    
+    top: 2.67em;
   }
-
-  /* TS */
   .skills-diagram .skill-5 {
-    top: 13em;
-    left: 1em;
     /* vertical-align: top; */  
-    /* width: 5em;
-    height: 5em;
-    line-height: 5em; */
-    /* background-color: rgba(109, 182, 173); */
-    /* border-color: #ee677f;     */
-    /* left: -12em;
-    top: -2em; */
-  }
-  
-  .skills-diagram .skill-6 { 
-    top: 3em;
-    left: -3em;
-
-     /* width: 5em;
-     height: 5em;
-     line-height: 5em;
-     border-color: #ef934e; */
-     /* left: 0;
-     top: 0; */
-  }
-  .skills-diagram .skill-7 {
-    top: 7em;
-    left: 1.5em;
-    /* vertical-align: bottom;
     width: 5em;
     height: 5em;
-    line-height: 5em;     */
+    line-height: 5em;
+    /* background-color: rgba(109, 182, 173); */
+    border-color: #ee677f;    
+    left: -12em;
+    top: -2em;
+  }
+  .skills-diagram .skill-6 { 
+     width: 3em;
+     height: 3em;
+     line-height: 3em;
+     border-color: #ef934e;
+     left: -8.66em;
+     top: -1em;
+  }
+  .skills-diagram .skill-7 {
+    vertical-align: bottom;
+    width: 5em;
+    height: 5em;
+    line-height: 5em;    
     /* background-color: rgba(214, 89, 102); */
-    /* border-color: #ce9a84; */
+    border-color: #ce9a84;
     
   }
   .skills-diagram .skill-8 {
-    top: 1.2em;
-    left: -1em;
-    font-size: 2.5em;
-    /* vertical-align: bottom;    
+    vertical-align: bottom;    
     width: 9em;
     height: 9em;
-    line-height: 9em; */
+    line-height: 9em;
     /* background-color: rgba(46, 138, 75); */
-    /* border-color: #F4EEDD;     */
-    /* top: 3.33em; */
+    border-color: #F4EEDD;    
+    top: 3.33em;
   }
-
-
   .skills-diagram .skill-9 {      
-    top: 1.5em;
-    font-size: 3.5em;
-    /* left: 3em; */
-
-    /* width: 10em;
+    width: 10em;
     height: 10em;
-    line-height: 10em;     */
+    line-height: 10em;    
     /* background-color: rgba(177, 18, 2); */
-    /* border-color: #1581A1;     */
-    /* left: -2em; */
+    border-color: #1581A1;    
+    left: -2em
   }
-
-  /* css3 */
   .skills-diagram .skill-10 {
-    top: 5.5em;
-    left: -1.5em;
-    font-size: 2.5em;
-
-    /* vertical-align: bottom;
+    vertical-align: bottom;
     width: 7em;
     height: 7em;
-    line-height: 7em; */
+    line-height: 7em;
     /* background-color: rgba(81, 112, 144); */
-    /* border-color: rgba(81, 112, 144, 1);     */
-    /* left: -2em;
-    top: 0px; */
-
-  }
-
-  /* bootstrap */
-  .skills-diagram .skill-11 {
-    top: 3.5em;
-    left: 1em;
-    /* left: 2em; */
+    border-color: rgba(81, 112, 144, 1);    
+    left: -2em;
+    top: 0px;
+    font-size: 1em;
   }
   
   /* Just to add real-scenario feeling */
@@ -242,28 +183,3 @@
     
   
 
-
-
-
-
-/* FLOATING */
-
-.skills-diagram .item {  
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-
-}
-
-.skills-diagram .item:nth-child(odd) {
-  animation-duration: 4.5s;
-}
-
-
-/* used in skills section */
-@keyframes floating {
-    from { transform: translate(0,  0px); }
-    65%  { transform: translate(0, 15px); }
-    to   { transform: translate(0, -0px); }    
-}
