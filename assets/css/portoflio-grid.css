@@ -123,13 +123,7 @@ a:link {
   
     .portfolio-grid  li {
         width: 50%;
-    }
-
-    .card-image {
-        /* max-height: 240px;    
-        width: 100%;
-        background-size: cover; */
-    }
+    }   
 
   }
 
@@ -137,6 +131,7 @@ a:link {
     
       .portfolio-grid  li {
           width: 100%;
+          margin-bottom: 40px;
       }  
   } 
 

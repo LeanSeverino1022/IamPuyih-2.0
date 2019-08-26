@@ -20,3 +20,10 @@ ul.skills-diagram  {
   border: 1px solid; 
   border-image: linear-gradient(90deg, #A065AA 0%, #4F72B8 50%) 1; 
 }
+
+@media screen and (max-width: 980px){
+  .skills-diagram  {
+    padding: 100px 0 60px;
+  }
+}
+
