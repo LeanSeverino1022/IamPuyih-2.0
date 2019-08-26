@@ -129,24 +129,12 @@
   */
   
   @media screen and (max-width: 767px) {
-  
-    .ps-timeline-sec .container ol:before {
-      background: #52437b;
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 100%;
-      position: absolute;
-      top: 130px !important;
-      left: 36px !important;
-    
-    }
-
     
     /* The big screen layout was too complex. Need to remove almosta all styles first */
 
     .ps-timeline-sec .container ol.ps-timeline {
       margin: 10px 0 0 25px;
+      
       border-left: 2px solid #52437b;
       padding-left: 0 !important;
       padding-top: 120px !important;
