@@ -1,6 +1,5 @@
-.skills-diagram {
+ul.skills-diagram  {
   font-size: 16px;
-  /* border: green 2px solid; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -14,13 +13,10 @@
    letter-spacing: 2px;
 }
 
-.skills-diagram .item {
+.skills-diagram li.item {
+  text-decoration: none;
+  list-style: none;
   padding: 15px;
-  border: 1px solid #2F363D;
-  margin: 2px;
-  /* width: 30%; */
- 
-
-
+  border: 1px solid; 
+  border-image: linear-gradient(90deg, #A065AA 0%, #4F72B8 50%) 1; 
 }
-

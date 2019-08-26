@@ -10,6 +10,7 @@
 	--primary-txt: #fff;
 	--secondary-txt: #959da5;
 	--border: #2F363D;
+	--border-radius: var(--border-radius);
   }
 
   /* 540D6E */  
@@ -119,9 +120,9 @@ input, select, textarea {
 	body {
 		/* background: url("http://www.script-tutorials.com/demos/360/images/stars.png"),linear-gradient(0deg, #1B1F23 90%, #52436E);	 */
 
-		background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #1B1F23), to(#52436E));
+		background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #1B1F23), to(#52437b));
 
-		background: linear-gradient(0deg, #1B1F23 90%, #52436E);		
+		background: linear-gradient(0deg, #1B1F23 90%, #52437b);		
 		color: #fff;	
 	}
 
@@ -157,17 +158,12 @@ input, select, textarea {
 
 		}
 
-	a {
-		-webkit-transition: color 0.2s ease, border-bottom 0.2s ease;
-		transition: color 0.2s ease, border-bottom 0.2s ease;
-		text-decoration: none;
-		border-bottom: dotted 1px;
-		color: inherit;
-	}
+		a {
 
-		a:hover {
-			border-bottom-color: transparent;
+			text-decoration: none;
+			color: inherit;
 		}
+	
 
 	strong, b {
 		font-weight: 400;
@@ -256,7 +252,7 @@ input, select, textarea {
 	}
 
 	code {
-		border-radius: 8px;
+		border-radius: var(--border-radius);
 		border: solid 1px;
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
@@ -1926,7 +1922,7 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		border-radius: 8px;
+		border-radius: var(--border-radius);
 		border: solid;
 		margin-bottom: 2em;
 		padding: 1.5em;
@@ -1940,7 +1936,7 @@ input, select, textarea {
 
 		.box.alt {
 			border: 0;
-			border-radius: 0;
+			border-radius: var(--border-radius);
 			padding: 0;
 		}
 
@@ -1961,7 +1957,7 @@ input, select, textarea {
 		appearance: none;
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		border-radius: 8px;
+		border-radius: var(--border-radius);
 		border: 0;
 		cursor: pointer;
 		display: inline-block;
@@ -2134,7 +2130,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		border-radius: 8px;
+		border-radius: var(--border-radius);
 		border: solid 1px;
 		color: inherit;
 		display: block;
@@ -2224,7 +2220,7 @@ input, select, textarea {
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
-				border-radius: 8px;
+				border-radius: var(--border-radius);
 				border: solid 1px;
 				content: '';
 				display: inline-block;
@@ -2244,7 +2240,7 @@ input, select, textarea {
 		}
 
 	input[type="checkbox"] + label:before {
-		border-radius: 8px;
+		border-radius: var(--border-radius);
 	}
 
 	input[type="radio"] + label:before {
@@ -2491,14 +2487,14 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		border-radius: 8px;
+		border-radius: var(--border-radius);
 		border: 0;
 		display: inline-block;
 		position: relative;
 	}
 
 		.image img {
-			border-radius: 8px;
+			border-radius: var(--border-radius);
 			display: block;
 		}
 
@@ -3142,16 +3138,11 @@ input, select, textarea {
 			}
 
 		.spotlight .image {
-			display: inline-block;
-			/* margin-left: 4em; */
-			/* padding: 0.65em; */
-			/* border-radius: 100%; */
-			/* border: solid 1px; */
+			display: inline-block;	
 		}
 
 			.spotlight .image img {
 				display: block;
-				/* border-radius: 100%; */
 				width: 16em;
 			}
 
@@ -3201,14 +3192,10 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
-
-			.spotlight .image {
-				padding: 0.35em;
+		
+			.spotlight .image img {
+				width: 12em;
 			}
-
-				.spotlight .image img {
-					width: 12em;
-				}
 
 		}
 
@@ -3433,7 +3420,7 @@ input, select, textarea {
 					line-height: 2.25em;
 					padding: 0 1.25em;
 					border: 0;
-					border-radius: 8px;
+					border-radius: var(--border-radius);
 					-webkit-box-shadow: inset 0 0 0 1px transparent;
 					        box-shadow: inset 0 0 0 1px transparent;
 				}
@@ -3487,7 +3474,7 @@ input, select, textarea {
 		
 		border-bottom: .5px solid #878787;
 		
-		border-radius: 0.25em;
+		border-radius: var(--border-radius).25em;
 	}
 
 		#main input, #main select, #main textarea {
@@ -3537,7 +3524,7 @@ input, select, textarea {
 			#main input[type="button"]:hover,
 			#main button:hover,
 			#main .button:hover {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: rgba(0, 0, 0);
 			}
 
 			#main input[type="submit"]:active,
@@ -3545,7 +3532,7 @@ input, select, textarea {
 			#main input[type="button"]:active,
 			#main button:active,
 			#main .button:active {
-				background-color: rgba(222, 222, 222, 0.5);
+				background-color: rgba(0, 0, 0, 0.5);
 			}
 
 			#main input[type="submit"].icon:before,
@@ -3812,7 +3799,7 @@ input, select, textarea {
 		@media screen and (max-width: 360px) {
 
 			#main {
-				border-radius: 0;
+				border-radius: var(--border-radius);
 			}
 
 				#main > .main {
@@ -3822,11 +3809,11 @@ input, select, textarea {
 					#main > .main > .image.main:first-child {
 						margin: -2.5em 0 1.5em -1em;
 						width: calc(100% + 2em);
-						border-radius: 0;
+						border-radius: var(--border-radius);
 					}
 
 						#main > .main > .image.main:first-child img {
-							border-radius: 0;
+							border-radius: var(--border-radius);
 						}
 
 		}
@@ -4018,6 +4005,33 @@ a.yi-link::after {
 	}
 /* end underline  hover links */
 
+/* gradient images */
+.gradient-image:before, .gradient-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 100%;
+}
+
+.gradient-image img {
+	object-fit: cover;
+}
+
+.gradient-image:before {
+    background: #000;
+    mix-blend-mode: overlay;
+    opacity: .3;
+}
+
+.gradient-image:after {
+    mix-blend-mode: lighten;
+    opacity: .7;
+    background: linear-gradient(135deg, #af40ff 0%,   #010C4E 75%);
+}
+
+
  .fr {
 	 float: right;
  }
@@ -4080,7 +4094,8 @@ a.yi-link::after {
 	
 	.gallery-modal {
 		width: 84%;
-		/* border-radius: 0; */
+		/* border-radius: var(--border-radius); */
 	}
 
 }
+

@@ -25,13 +25,7 @@ a:link {
      
 
   .card {
-      position: relative;
-      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
-      -webkit-transition: 0.300s;
-      transition: 0.300s;
-      -webkit-transition: 0.3s;
-      transition: 0.3s; 
+      position: relative;    
       background: #24292E;
   }
   
@@ -43,6 +37,10 @@ a:link {
       background-position: center;
   }
   
+  .card:hover .card-image {
+    opacity: .1
+  }
+
   .card-desc {
       padding: 10px 20px 0px;
       height: 150px;
@@ -65,12 +63,12 @@ a:link {
       right: 0;
       height: 100%;
       width: 100%;
-      background: rgba(21, 20, 22, 0.4);  
+      
       opacity: 0;  
   }
   
   .card-overlay .wrapper {
-      height: 90%; /* make buttons slightly higher than middle */
+      height: 70%; /* make buttons slightly higher than middle */
       width: 100%; 
       display: -webkit-box;
       display: -ms-flexbox;
@@ -98,23 +96,24 @@ a:link {
   }
   
   .card-overlay-action {    
+      background-color: rgb(31, 33, 36);
+      border: 1px solid #fff;
       min-width: 150px;
       margin-top: 10px;
-      background-color: rgba(73, 53, 103, 1);
       padding: 10px 16px;
       font-size: 18px;
       line-height: 1.3333333;
-      border-radius: 6px;
       text-align: center;
   }
 
   /* override */
   #main a.card-overlay-action  {
       color: #fff;
+      border: 2px solid #c89e18;
   }
   
   .card-overlay-action:hover {
-      background-color: rgba(73, 53, 103, .9);      
+      opacity: .7;    
   }
   
 
