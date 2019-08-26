@@ -24,6 +24,11 @@ ul.skills-diagram  {
 @media screen and (max-width: 980px){
   .skills-diagram  {
     padding: 100px 0 60px;
+   
+  }
+
+  .skills-diagram .item {
+    margin: 2px;
   }
 }
 
