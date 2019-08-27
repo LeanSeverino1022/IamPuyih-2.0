@@ -30,22 +30,20 @@ a:link {
      
 
   .card {
-      position: relative;    
       background: #24292E;
   }
   
   .card-image {
+      position: relative;
       height: 300px; 
       overflow: hidden;
       width: 100%;
       background-size: cover;
-      background-position: center;
-      -webkit-transition: opacity .5s;
-      transition: opacity .5s;
+      background-position: center;      
   }
   
   .card:hover .card-image {
-    opacity: .2
+    
   }
 
   .card-desc {
@@ -61,8 +59,8 @@ a:link {
   
   /* card overlays */
   .card-overlay {
-      -webkit-transition: all 0.3s ease-in;
-       transition: all 0.3s ease-in;
+      -webkit-transition: all 0.3s linear;
+       transition: all 0.3s linear;
       position: absolute;
       top: 0;
       left: 0;
@@ -70,12 +68,12 @@ a:link {
       right: 0;
       height: 100%;
       width: 100%;
-      
+      background: rgba(0, 0, 0, 0.6);
       opacity: 0;  
   }
   
   .card-overlay .wrapper {
-      height: 70%; /* make buttons slightly higher than middle */
+      height: 100%; /* make buttons slightly higher than middle */
       width: 100%; 
       display: -webkit-box;
       display: -ms-flexbox;
@@ -97,6 +95,12 @@ a:link {
       opacity: 1;
   }
   
+  .card-overlay p {
+      font-size: 18px;
+      background: #8b0101;
+      padding: 2px 3px;
+  }
+
   .card-overlay-action,
   .card-overlay-action:visited {
       color: #fff;

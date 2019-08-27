@@ -32,15 +32,14 @@ if (typeof myPortfolio === 'undefined') {
             title: null,
             description:'ResultMaps is an application that helps teams and people to create clear roadmaps to track tasks and focus on results.',
             class: ["open-overlay"], //custom class
-            img: 'images/gallery/rm.jpg',
+            img: 'images/gallery/rm.jpg',            
             actionLinks: { 
                 // {[name of the button] : [link]} 
                 "Learn more" : "javascript:galleryModal.show(0);",
             }
             
         },
-        {
-            
+        {            
             title: null,
             description: "EverThread is a visualization platform. I've helped the company develop tools that give customers the ability to customize products across categories in a virtual environment.",
             class: [], //custom class
@@ -73,6 +72,7 @@ if (typeof myPortfolio === 'undefined') {
             description:"Created a game with ImpactJS, a JavaScript Game Engine. I had to replace / remove the original assets becaue I cannot use them for my personal portfolio.",
             class: [], //custom class
             img: 'images/gallery/sinkem-game.jpg',
+            overlayMsg: 'Note: This Game was created for desktop',
             actionLinks: {                 
                 "Play Game" : "https://puyihsdumpsite.000webhostapp.com/game/index.html",
                 "View source on Github" : "https://github.com/LeanSeverino1022/sink-Em/blob/master/README.markdown"
@@ -136,10 +136,12 @@ if (typeof myPortfolio === 'undefined') {
             console.log(item.description);
 
             // text(item.description);
-
             const $cardOverlay = `
                 <div class="card-overlay">
                     <div class="wrapper">
+                    ${ item.overlayMsg ? `<p>${item.overlayMsg}</p>`: '' }
+                    
+            
                     ${Object.keys(item.actionLinks).map(
                         key =>
                             '<a target="_blank" href="'+item.actionLinks[key]+'" class="card-overlay-action">'+ key + '</a>'
@@ -148,10 +150,11 @@ if (typeof myPortfolio === 'undefined') {
                     </div>                 
                 </div>`;
 
-            $card.append($cardImage);
+            $card.append($cardImage.append($cardOverlay));
+           
             $card.append(
                 $cardContent.append($contentTitle, $cardDesc));
-            $card.append($cardOverlay);
+          
 
             // return card. 1 card = 1 project
             return $outerDiv.append($card);
