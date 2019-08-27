@@ -194,9 +194,11 @@ myPortfolio.fadeUpCardsOnView = function() {
 }
 
 myPortfolio.enableCardOverlayOnMobile = function(){
-
+    
     if(window.USER_IS_USING_TOUCH_DEVICE) {
-      
+        //hide it by default
+        $('.card-overlay').hide();
+
         $('.card').on('click', function(evt){
             $('.card-overlay').hide();
             $('.card-overlay', this).show();
