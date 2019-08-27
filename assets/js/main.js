@@ -251,7 +251,7 @@ var galleryModal = {
       
     this.DOM.container.popup({
 
-      color: "rgba(99, 76, 161)",
+      color: "rgb(73, 73, 110)",
       // color: 'white',
       opacity: .9,
       transition: '0.3s',
