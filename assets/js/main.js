@@ -233,7 +233,13 @@
       "retina_detect": true
     });
 
-  }); 
+    //toggle burger menu
+    $(".burger-menu-btn").click(function(){
+      alert('hello')
+      document.getElementById("nav").classList.toggle('collapse');
+    })
+
+  });
 
 })(jQuery);
 
@@ -241,14 +247,14 @@
 var galleryModal = {
   DOM: {},
 
-  init: function () {        
-      // cache dom      
+  init: function () {
+      // cache dom
       this.DOM.container = $(".gallery-modal");
       this.DOM.content = $('.gallery-modal .content');
   },
 
   show: function (index) {
-      
+
     this.DOM.container.popup({
 
       color: "rgb(73, 73, 110)",
@@ -258,15 +264,15 @@ var galleryModal = {
       scrolllock: true,
       // blur: false,
       autoopen: true,
-    
+
       closeelement: '.popover-close',
       // escape: false,
 
       onopen: function () {
-        galleryModal.DOM.content.html( window.overlayData[index].content );   
+        galleryModal.DOM.content.html( window.overlayData[index].content );
       },
 
     });
-  },  
+  },
 
 };

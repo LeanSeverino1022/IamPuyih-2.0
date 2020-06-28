@@ -13,8 +13,9 @@
 		<link rel="stylesheet" href="assets/css/portoflio-grid.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	
+
 	<body class="is-preload">
+
 		<div id="home">
 			<div id="particles-js">
 				<div class="home-content">
@@ -43,16 +44,23 @@
 					<p>Web Developer</p>
 				</div>
 			</div>
-			
+
 		</div>
-		
+
 
 		<div id="wrapper">
 
 			<!-- Header -->
-		
+
 			<!-- Nav -->
 				<nav id="nav">
+
+					<div class="burger-menu-btn" onclick="toggle()">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+
 					<ul>
 						<li><a href="#intro" class="yi-link active">About</a></li>
 						<li><a href="#exp" class="yi-link">Experience</a></li>
@@ -70,11 +78,11 @@
 							<div class="content">
 								<header class="major">
 									<h2>A little about me</h2>
-								</header>							
+								</header>
 								<div class="image gradient-image">
 									<img src="images/about_me.jpg" alt="" />
 								</div>
-								
+
 								<p>Hi, I'm Leandro. I <span class="heartbeat">&#x2665;</span> programming and & enjoy building stuff made with code. I can say I specialize in
 									Front-End Development / Javascript and I'm working hard towards becoming a really good Full-stack
 									Developer.</p>
@@ -82,28 +90,28 @@
 									<li><a href="about-me.html" class="button">Want to know more?</a></li>
 								</ul>
 							</div>
-		
-				
+
+
 							<ul class="skills-diagram">
 								<li class="item">HTML5</li>
 								<li class="item">CSS3</li>
 								<li class="item">Javascript</li>
 								<li class="item">Responsive design</li>
-								<li class="item">Bootstrap</li>								
+								<li class="item">Bootstrap</li>
 								<li class="item">jQuery</li>
-								<!-- <li class="item">SASS</li> -->							
+								<!-- <li class="item">SASS</li> -->
 								<li class="item" style="background: #141414">SKILLS</li>
 								<!-- <li class="item" style="background: linear-gradient(135deg, #c69de3 0%, #a044ff 75%); margin: 0px;">SKILLS</li> -->
-								<li class="item">D3.js</li>								
-								<li class="item">React.js</li>						
-								<li class="item">Vue.js</li>						
+								<li class="item">D3.js</li>
+								<li class="item">React.js</li>
+								<li class="item">Vue.js</li>
 								<li class="item">Knockout.js</li>
 								<li class="item">Typescript</li>
 								<li class="item">Git</li>
 							</ul>
-						
+
 						</div>
-						
+
 					</section>
 
 				<!-- exp Section -->
@@ -116,8 +124,8 @@
 								<ol class="ps-timeline">
 									<li>
 										<div class="xp-content">
-											<div class="img-handler-top">										
-												<img src="images/graduation.png" alt="" style/>										
+											<div class="img-handler-top">
+												<img src="images/graduation.png" alt="" style/>
 											</div>
 											<div class="ps-bot">
 												<p> BS in Computer Science
@@ -163,7 +171,7 @@
 												<h3>Web Developer</h3>
 												<p>I'm here now! I've been doing this for more than 3 years now and I love it for so many reasons.</p>
 											</div>
-		
+
 										</div>
 										<span class="ps-sp-bot"><i class="fas fa-code"></i></span>
 									</li>
@@ -179,12 +187,12 @@
 							<p>View some of my personal and client works (not protected by a Non-Disclosure Agreement) <br>or you could check out my Github account </p>
 						</header>
 
-						<!-- Portfolio Gallery -->	
+						<!-- Portfolio Gallery -->
 						<ul class="portfolio-grid">
-							
+
 						</ul>
 						<!--END PORTFOLIO GALLERY-->
-						
+
 						<footer class="major">
 								<h3>I'm still working on my own "code labs" section where I share more of the stuff I'm doing for fun. </h3>
 						</footer>
@@ -225,7 +233,7 @@
 						</footer>
 					</section>
 
-				
+
 					<section id="contact" class="main special">
 						<header class="major">
 							<h2>Contact me</h2>
@@ -240,8 +248,8 @@
 								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 							</ul>
 						</div>
-							
-						<div class="contact-form" style="display: none">
+
+						<div class="contact-form">
 							<form method="post" action="#">
 								<div class="row gtr-uniform">
 									<div class="col-6 col-12-xsmall">
@@ -249,44 +257,44 @@
 									</div>
 									<div class="col-6 col-12-xsmall">
 										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>							
-									
+									</div>
+
 									<div class="col-12">
 										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
 									</div>
 									<div class="col-12">
-										<ul class="actions">														
+										<ul class="actions">
 											<li><input type="reset" value="Reset" /></li>
 											<li><input type="submit" value="Send Message" class="primary" /></li>
 										</ul>
 									</div>
-								</div>									
+								</div>
 							</form>
-						</div>								
+						</div>
 					</section>
 				</div>
 
-					<!-- <footer id="footer">			
-					</footer> -->		
+					<!-- <footer id="footer">
+					</footer> -->
 
 			</div>
 
 
 			<!-- proj more info popover -->
-			<div class="gallery-modal">	
+			<div class="gallery-modal">
 				<div class="content">
 
-				</div>	
-				<!-- <p>Resultmaps is a peak performance platform.  
+				</div>
+				<!-- <p>Resultmaps is a peak performance platform.
 						An application designed to help individuals, teams, and teams of teams. I'm a long-time member of the team and I have contributed to the development of different tools such as Gantt chart, kanban boards, etc. I also lead the development of the main mindmap / tree diagram feature. I'm mostly used to work on old and new Javascript-heavy projects and fix existing complex css issues. </p> -->
 				<div class="buttons">
 					<a href="javascript: void(0)" class="popover-close button fr txt-green">close</a>
 				</div>
 			</div>
 			<!-- <div >Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-		
+
 		<!-- Scripts -->
-		
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -295,7 +303,7 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/anime.min.js"></script>
-			<script src="assets/js/util.js"></script>			
+			<script src="assets/js/util.js"></script>
 			<script src="assets/js/render-portfolio.js"></script>
 			<script src="assets/js/animated-bg.js"></script>
 			<script src="assets/js/main.js"></script>

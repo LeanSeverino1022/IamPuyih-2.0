@@ -2,9 +2,9 @@
 a:link {
     text-decoration: none ;
   }
- 
-  
-  ul.portfolio-grid {    
+
+
+  ul.portfolio-grid {
       margin: 0 auto;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -19,44 +19,44 @@ a:link {
     }
 
     li.portfolio-grid-item {
-      margin: 0;    
+      margin: 0;
       width: 33.33%;
       max-width: 400px;
- 
+
       height: 100%;
       padding: 5px !important;
       overflow: hidden;
     }
-     
+
 
   .card {
       background: #24292E;
   }
-  
+
   .card-image {
       position: relative;
-      height: 300px; 
+      height: 300px;
       overflow: hidden;
       width: 100%;
       background-size: cover;
-      background-position: center;      
+      background-position: center;
   }
-  
+
   .card:hover .card-image {
-    
+
   }
 
   .card-desc {
       padding: 10px 20px 0px;
       height: 150px;
-      overflow: hidden;    
+      overflow: hidden;
       border-top: 1px solid rgba(160,160,160,0.2);
   }
-  
+
   .card-title {
       line-height: 2.5rem;
   }
-  
+
   /* card overlays */
   .card-overlay {
       -webkit-transition: all 0.3s linear;
@@ -69,12 +69,12 @@ a:link {
       height: 100%;
       width: 100%;
       background: rgba(0, 0, 0, 0.7);
-      opacity: 0;  
+      opacity: 0;
   }
-  
+
   .card-overlay .wrapper {
       height: 100%; /* make buttons slightly higher than middle */
-      width: 100%; 
+      width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -88,13 +88,13 @@ a:link {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-  }      
-  
+  }
+
   .card:hover .card-overlay{
       visibility: visible;;
       opacity: 1;
   }
-  
+
   .card-overlay p {
       font-size: 18px;
       background: #8b0101;
@@ -105,8 +105,8 @@ a:link {
   .card-overlay-action:visited {
       color: #fff;
   }
-  
-  .card-overlay-action {    
+
+  .card-overlay-action {
       background-color: rgb(31, 33, 36);
       border: 1px solid #fff;
       min-width: 150px;
@@ -122,28 +122,28 @@ a:link {
       color: #fff;
       border: 2px solid #755cf6;
   }
-  
+
   .card-overlay-action:hover {
-      opacity: .7;    
+      opacity: .7;
   }
-  
+
 
     /*MEDIA QUERIES  */
-  
+
   @media screen and (max-width: 1045px) {
-  
+
     .portfolio-grid  li {
         width: 50%;
-    }   
+    }
 
   }
 
-  @media screen and (max-width: 700px) { 
-    
+  @media screen and (max-width: 700px) {
+
       .portfolio-grid  li {
           width: 100%;
           margin-bottom: 40px;
-      }  
-  } 
+      }
+  }
 
     /*-- //portfolio --*/

@@ -13,7 +13,7 @@
 	--border-radius: var(--border-radius);
   }
 
-  /* 540D6E */  
+  /* 540D6E */
 
 
 html, body, div, span, applet, object,
@@ -30,7 +30,7 @@ section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%; 
+	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
 
@@ -118,15 +118,12 @@ input, select, textarea {
 /* Type */
 
 	body {
-		/* background: url("http://www.script-tutorials.com/demos/360/images/stars.png"),linear-gradient(0deg, #1B1F23 90%, #52436E);	 */
 
-		background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #1B1F23), to(#52437b));
-
-		background: linear-gradient(0deg, #1B1F23 90%, #52437b);		
-		color: #fff;	
+		background: linear-gradient(0deg, #1B1F23 90%, #52437b);
+		color: #fff;
 	}
 
-	
+
 	body, input, select, textarea {
 		font-family: "Source Sans Pro", Helvetica,sans-serif;
 		font-size: 17pt;
@@ -163,7 +160,7 @@ input, select, textarea {
 			text-decoration: none;
 			color: inherit;
 		}
-	
+
 
 	strong, b {
 		font-weight: 400;
@@ -337,7 +334,7 @@ input, select, textarea {
 		        box-sizing: border-box;
 		-webkit-box-align: stretch;
 		    -ms-flex-align: stretch;
-		        align-items: stretch;
+				align-items: stretch;
 	}
 
 		.row > * {
@@ -3138,7 +3135,7 @@ input, select, textarea {
 			}
 
 		.spotlight .image {
-			display: inline-block;	
+			display: inline-block;
 		}
 
 			.spotlight .image img {
@@ -3154,7 +3151,7 @@ input, select, textarea {
 				-webkit-box-orient: vertical;
 				-webkit-box-direction: normal;
 				        flex-direction: column;
-				text-align: center;			
+				text-align: center;
 			}
 
 				.spotlight .content {
@@ -3192,7 +3189,7 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
-		
+
 			.spotlight .image img {
 				width: 12em;
 			}
@@ -3224,7 +3221,7 @@ input, select, textarea {
 		background-color: #000;
 		opacity: 1;
 	}
-	
+
 	.home-content {
 		position: absolute;
 		left: 50%;
@@ -3233,12 +3230,12 @@ input, select, textarea {
 		        transform: translate(-50%, -50%);
 		text-align: center;
 		min-width: 300px;
-	}	
+	}
 
 	.home-content > * {
-	
+
 		-webkit-transition: opacity 3s ease;
-	
+
 		transition: opacity 3s ease;
 		-webkit-transition-delay: 0.5s;
 		transition-delay: 0.5s;
@@ -3342,34 +3339,26 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* Nav */
+/* ------ Nav / burger menu----*/
 
 	#nav {
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 
 		color: var(--primary-txt);
-		position: absolute;
-		width: 100%;	
-		max-width: 1500px;	
-		
+		position: relative;
+		width: 100vw;
+		margin: 0 calc(50% - 50vw);
 		padding: 1em;
-
 		background-color: var(--secondary-bg);
-	
-
 		cursor: default;
 		text-align: center;
 		border: 1px solid var(--border);
-		
+
 	}
 
 		#nav input, #nav select, #nav textarea {
 			color: #636363;
-		}
-
-		#nav a:hover {
-			/* color: #636363; */
 		}
 
 		#nav strong, #nav b {
@@ -3425,10 +3414,6 @@ input, select, textarea {
 					        box-shadow: inset 0 0 0 1px transparent;
 				}
 
-					#nav ul li a:hover {
-						/* background-color: rgba(222, 222, 222, 0.25); */
-					}
-
 					#nav ul li a.active {
 						/* background-color: #ffffff; */
 						color: var(--green-txt);
@@ -3439,6 +3424,7 @@ input, select, textarea {
 		#nav.alt {
 			position: fixed;
 			top: 0;
+			left: 0;
 			padding: 0.5em 1em;
 			background-color: var(--secondary-bg);
 			border-top-left-radius: 0;
@@ -3453,6 +3439,44 @@ input, select, textarea {
 				#nav.alt ul li a {
 					font-size: 0.9em;
 				}
+
+
+	/* ------Burger menu section-------- */
+	.burger-menu-btn {
+		top: 20px;
+		right: 22px;
+		display: inline-block;
+		position: fixed;
+	}
+
+	/* set line colors by default to blue*/
+	.burger-menu-btn > div{
+		display: block;
+		width: 30px;
+		height: 5px;
+		margin-bottom: 5px;
+		background: #89ee91;
+		border-radius: 3px;
+		transform-origin: center;
+		transition: .5s;
+	}
+
+
+	/* todo: maybe add a class to the div */
+	.menu.collapse .burger-menu-btn > div{
+	transform: translateY(10px) rotate(-45deg);
+	}
+
+	.menu.collapse .burger-menu-btn > div:nth-child(2){
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+
+	}
+
+	.menu.collapse .burger-menu-btn > div:nth-child(3){
+		transform: translateY(-10px) rotate(45deg);
+	}
+
 
 		@media screen and (max-width: 736px) {
 
@@ -3470,10 +3494,10 @@ input, select, textarea {
 
 	#main {
 		/* background-color: rgba(46,53,67,.8); #2E3543; */
-		/* background-color:rgba(27,31,35,.7);#1B1F23 */
-		
+		background-color:rgba(27,31,35,.7);
+
 		border-bottom: .5px solid #878787;
-		
+
 		border-radius: var(--border-radius).25em;
 	}
 
@@ -3516,7 +3540,7 @@ input, select, textarea {
 		#main button,
 		#main .button {
 			background-color: transparent;
-			border: 1px solid var(--primary-text);	
+			border: 1px solid var(--primary-text);
 		}
 
 			#main input[type="submit"]:hover,
@@ -3588,7 +3612,7 @@ input, select, textarea {
 		#main input[type="email"],
 		#main select,
 		#main textarea {
-		
+
 			color: var(--green-txt);
 		}
 
@@ -3844,7 +3868,7 @@ input, select, textarea {
 			font-size: 0.8em;
 			text-align: center;
 		}
-		
+
 
 		/* for large screens set icons as column */
 		@media screen and (min-width: 980px) {
@@ -3861,7 +3885,7 @@ input, select, textarea {
 				        justify-content: center;
 				height: 100%;
 			}
-		}		
+		}
 
 		@media screen and (max-width: 1280px) {
 
@@ -3929,7 +3953,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#wrapper {
-				
+
 				max-width: calc(100%);
 			}
 
@@ -3950,8 +3974,9 @@ input, select, textarea {
 	padding: 2em;
 	/* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
 	width: 100%;
+	max-width: 800px;
 	margin: 0 auto;
-	letter-spacing: 1.5px;	
+	letter-spacing: 1.5px;
 }
 
 #contact .contact-form input,
@@ -3995,11 +4020,11 @@ a.yi-link::after {
 	display: block;
 	height: 2px;
 	width: 0;
-	background: var(--green-txt);  
-	-webkit-transition: width .3s;  
+	background: var(--green-txt);
+	-webkit-transition: width .3s;
 	transition: width .3s;
 }
-	
+
 	a.yi-link:hover::after {
 		width: 100%;
 	}
@@ -4046,15 +4071,15 @@ a.yi-link::after {
  #main .txt-green:hover {
 	 color: var(--green-txt)
  }
- 
+
 
 /* end helpers */
 
 
 
-/* Hearbeat animation */		
-.heartbeat {	
-	-webkit-animation: beat .25s infinite alternate;	
+/* Hearbeat animation */
+.heartbeat {
+	-webkit-animation: beat .25s infinite alternate;
 	        animation: beat .25s infinite alternate;
 	-webkit-transform-origin: center;
 	        transform-origin: center;
@@ -4090,11 +4115,16 @@ a.yi-link::after {
 }
 
 @media screen and (max-width: 700px) {
-	
+
 	.gallery-modal {
 		width: 84%;
 		border-radius: var(--border-radius);
 	}
 
 }
+
+
+
+
+
 
