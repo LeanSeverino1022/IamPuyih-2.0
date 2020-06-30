@@ -118,8 +118,7 @@ input, select, textarea {
 /* Type */
 
 	body {
-
-		background: linear-gradient(0deg, #1B1F23 90%, #52437b);
+		background: #1B1F23;
 		color: #fff;
 	}
 
@@ -3205,6 +3204,7 @@ input, select, textarea {
 		height: 85vh;
 		-webkit-transition: all 1s ease;
 		transition: all 1s ease;
+		background: linear-gradient(to bottom, #52437b, #1a1e22);
 	}
 
 	#home h1 {
@@ -3339,69 +3339,104 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* ------ Nav / burger menu----*/
+	/* ------ sec: Nav / burger menu----*/
 
-	#nav {
+	.main-nav {
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 
+		animation: scaleDown 350ms ease-in-out forwards;
+   		transform-origin: top center;
+
 		color: var(--primary-txt);
-		position: relative;
+
 		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top:0;
+		left:0;
 		margin: 0 calc(50% - 50vw);
 		padding: 1em;
 		background-color: var(--secondary-bg);
 		cursor: default;
 		text-align: center;
 		border: 1px solid var(--border);
-
+		font-size: 2em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
 	}
 
-		#nav input, #nav select, #nav textarea {
+	@keyframes scaleDown {
+		0% {
+			transform: scaleY(0)
+		}
+		70% {
+			transform: scaleY(1.1) /* bounce effect */
+		}
+		100% {
+			transform: scaleY(1)
+		}
+	}
+
+	@media screen and (min-width: 736px) {
+		.main-nav, .main-nav.hidden {
+			display: block;
+			font-size: 1em;
+			height: auto;
+		}
+
+		.main-nav ul li {
+			display: inline-block;
+		}
+	}
+
+
+		.main-nav input, .main-nav select, .main-nav textarea {
 			color: #636363;
 		}
 
-		#nav strong, #nav b {
+		.main-nav strong, .main-nav b {
 			color: #636363;
 		}
 
-		#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
+		.main-nav h1, .main-nav h2, .main-nav h3, .main-nav h4, .main-nav h5, .main-nav h6 {
 			color: #636363;
 		}
 
-		#nav blockquote {
+		.main-nav blockquote {
 			border-left-color: #dddddd;
 		}
 
-		#nav code {
+		.main-nav code {
 			background: rgba(222, 222, 222, 0.25);
 			border-color: #dddddd;
 		}
 
-		#nav hr {
+		.main-nav hr {
 			border-bottom-color: #dddddd;
 		}
 
-		#nav + #main {
+		.main-nav + #main {
 			padding-top: 4.25em;
 		}
 
-		#nav ul {
+		.main-nav ul {
 			margin: 0;
 			padding: 0;
 			list-style: none;
 		}
 
-			#nav ul li {
+			.main-nav ul li {
 				-webkit-transition: margin 0.2s ease;
 				transition: margin 0.2s ease;
-				display: inline-block;
 				margin: 0 0.35em;
 				padding: 0;
 				vertical-align: middle;
 			}
 
-				#nav ul li a {
+				.main-nav ul li a {
 					-webkit-transition: font-size 0.2s ease;
 					transition: font-size 0.2s ease;
 					display: inline-block;
@@ -3414,14 +3449,14 @@ input, select, textarea {
 					        box-shadow: inset 0 0 0 1px transparent;
 				}
 
-					#nav ul li a.active {
+					.main-nav ul li a.active {
 						/* background-color: #ffffff; */
 						color: var(--green-txt);
 						-webkit-box-shadow: none;
 						        box-shadow: none;
 					}
 
-		#nav.alt {
+		.main-nav.alt {
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -3432,21 +3467,29 @@ input, select, textarea {
 			z-index: 10000;
 		}
 
-			#nav.alt ul li {
+			.main-nav.alt ul li {
 				margin: 0 0.175em;
 			}
 
-				#nav.alt ul li a {
-					font-size: 0.9em;
-				}
-
-
 	/* ------Burger menu section-------- */
 	.burger-menu-btn {
-		top: 20px;
-		right: 22px;
+		/* visibility: hidden; */
+		top: -22px;
+		right: -20px;
 		display: inline-block;
 		position: fixed;
+		z-index: 99999;
+		opacity: 0;
+	}
+
+	body:not(.is-preload) .burger-menu-btn {
+
+		-webkit-transition:  all 2s ease-in;
+		-moz-transition:  all 2s ease-in;
+		-o-transition:  all 2s ease-in;
+		transition:  all .5s 1s ease ;
+		opacity: 1;
+		transform: translate(-44px,44px);
 	}
 
 	/* set line colors by default to blue*/
@@ -3455,38 +3498,45 @@ input, select, textarea {
 		width: 30px;
 		height: 5px;
 		margin-bottom: 5px;
-		background: #89ee91;
-		border-radius: 3px;
+		background: #ffec08;
 		transform-origin: center;
 		transition: .5s;
 	}
 
-
 	/* todo: maybe add a class to the div */
-	.menu.collapse .burger-menu-btn > div{
+	.main-nav.collapse + .burger-menu-btn > div{
 	transform: translateY(10px) rotate(-45deg);
 	}
 
-	.menu.collapse .burger-menu-btn > div:nth-child(2){
+	.main-nav.collapse + .burger-menu-btn > div:nth-child(2){
 		opacity: 0;
 		transform: rotate(0deg) scale(0.2, 0.2);
 
 	}
 
-	.menu.collapse .burger-menu-btn > div:nth-child(3){
+	.main-nav.collapse + .burger-menu-btn > div:nth-child(3){
 		transform: translateY(-10px) rotate(45deg);
 	}
 
 
-		@media screen and (max-width: 736px) {
+		@media screen and (min-width: 736px) {
 
-			#nav {
-				display: none;
+			.burger-menu-btn {
+				display: none;;
 			}
 
-				#nav + #main {
-					padding-top: 0;
+
+			.main-nav {
+				position: relative;
+			}
+
+				.main-nav.alt ul li a {
+					font-size: 0.9em;
 				}
+
+			.main-nav + #main {
+				padding-top: 0;
+			}
 
 		}
 
@@ -3661,7 +3711,7 @@ input, select, textarea {
 		}
 
 		#main ::-webkit-input-placeholder {
-			/* color: rgba(99, 99, 99, .80) !important; */
+			color: rgba(99, 99, 99, .80) !important;
 		}
 
 		#main :-moz-placeholder {
@@ -4003,6 +4053,10 @@ input, select, textarea {
 
 
 /* helpers */
+
+.hidden {
+	display: none;
+}
 
 /* underline  hover links */
 a.yi-link {

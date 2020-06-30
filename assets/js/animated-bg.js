@@ -1,6 +1,12 @@
+// Play initial animations on page load.
+$(window).on('load', function () {
+  window.setTimeout(function () {
+    runLogoAnimation()
+  }, 100)
+})
 
 function runLogoAnimation(){
-  
+
   // ANIMATED LOGO
   const svgPath = document.querySelectorAll('path');
 
@@ -11,13 +17,13 @@ function runLogoAnimation(){
     delay: 3000,
     duration: 1500,
     // direction: 'alternate',
-    // loop: true, 
+    // loop: true,
     opacity: 1,
     complete: function(){
-           
+
       setTimeout(() => {
         $('body').removeClass('is-preload');
-      }, 500);     
+      }, 500);
     }
   });
 
@@ -51,12 +57,12 @@ function runLogoAnimation(){
     // scaling start with large font and scale to 1 when done
     scale: [
       { value: 2, delay: 0, duration : 1 },
-      { value: 1, delay: 4500, duration: 1000},       
+      { value: 1, delay: 4500, duration: 1000},
     ],
 
-    opacity: 1
-   
+    opacity: 1,
+
     // loop: true,
-    // opacity: .1, 
+    // opacity: .9,
   });
 }
