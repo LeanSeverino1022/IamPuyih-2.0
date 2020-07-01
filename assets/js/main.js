@@ -14,9 +14,9 @@
     })
 
     // Nav.
-    var $nav = $('.main-nav')
+    var $nav = $('.js-main-nav')
 
-    if ($nav.length > 0) {
+    if ($nav.length) {
         // Shrink effect.
         $main.scrollex({
             mode: 'top',
@@ -35,10 +35,11 @@
             .scrolly({
                 speed: 1000,
                 offset: function() {
-                    return 0;//hard coded
+                    return 70;//hard coded
                 }
             })
             .on('click', function() {
+
                 var $this = $(this)
 
                 // External link? Bail.
@@ -210,12 +211,15 @@
         ;
         (function() {
 
-            var navMenuDiv = document.querySelector('.main-nav');
+            var nav = document.querySelector('.js-main-nav');
+            var nevMenuList = document.querySelector('.main-nav-list');
+
+            if(!nav) throw new Error("No elements matched by " + this.selector);
             var navBtn = document.querySelector('.burger-menu-btn');
 
             //toggle burger menu animation
             $('.burger-menu-btn').click(function() {
-                document.querySelector('.main-nav').classList.toggle('collapse')
+                nav.classList.toggle('collapse')
             })
 
             /*Toggle dropdown list*/
@@ -232,18 +236,18 @@
                 var target = (e && e.target) || (event && event.srcElement)
 
                 //Nav Menu
-                if (!checkParent(target, navMenuDiv)) {
+                if (!checkParent(target, nav)) {
                     // click NOT on the menu
                     if (checkParent(target, navBtn)) {
                         // click on the link
-                        if (navMenuDiv.classList.contains('hidden')) {
-                            navMenuDiv.classList.remove('hidden')
+                        if (nevMenuList.classList.contains('hidden')) {
+                            nevMenuList.classList.remove('hidden')
                         } else {
-                            navMenuDiv.classList.add('hidden')
+                            nevMenuList.classList.add('hidden')
                         }
                     } else {
                         // click both outside link and outside menu, hide menu
-                        navMenuDiv.classList.add('hidden')
+                        nevMenuList.classList.add('hidden')
                     }
                 }
             }
@@ -259,12 +263,12 @@
             }
 
             // HIDE THE DROP DOWN NAV MENU ON LINK CLICK
-            navMenuDiv.querySelectorAll('.main-nav li').forEach(el => {
+            nav.querySelectorAll('li').forEach(el => {
                 el.addEventListener('click', e => {
-                    navMenuDiv.classList.add('hidden');
+                    nevMenuList.classList.add('hidden');
 
-                    if(navMenuDiv.classList.contains('collapse')) {
-                        navMenuDiv.classList.remove("collapse");
+                    if(nav.classList.contains('collapse')) {
+                        nav.classList.remove("collapse");
                     }
 
                 })

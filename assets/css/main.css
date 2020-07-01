@@ -3341,30 +3341,39 @@ input, select, textarea {
 
 	/* ------ sec: Nav / burger menu----*/
 
-	.main-nav {
+	.js-main-nav {
+		position: fixed;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		min-height: 60px;
+		background-color: none;
+		z-index: 1;
+	}
+
+	.main-nav-list {
+		background-color: var(--secondary-bg);
+		text-align: center;
+		font-size: 2em;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1em;
+
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 
 		animation: scaleDown 350ms ease-in-out forwards;
-   		transform-origin: top center;
+		transform-origin: top center;
 
-		color: var(--primary-txt);
+	}
 
-		width: 100vw;
-		height: 100vh;
+	.main-nav {
 		position: fixed;
 		top:0;
 		left:0;
-		margin: 0 calc(50% - 50vw);
-		padding: 1em;
-		background-color: var(--secondary-bg);
-		cursor: default;
-		text-align: center;
-		border: 1px solid var(--border);
-		font-size: 2em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		z-index: 1;
 	}
 
@@ -3381,54 +3390,31 @@ input, select, textarea {
 	}
 
 	@media screen and (min-width: 736px) {
-		.main-nav, .main-nav.hidden {
+		/* override hidden on large screens. we want the nav visibile always */
+		.main-nav-list, .main-nav-list.hidden {
 			display: block;
-			font-size: 1em;
 			height: auto;
+			font-size: 1em;
 		}
 
-		.main-nav ul li {
+		.js-main-nav ul li {
 			display: inline-block;
 		}
 	}
 
 
-		.main-nav input, .main-nav select, .main-nav textarea {
-			color: #636363;
-		}
-
-		.main-nav strong, .main-nav b {
-			color: #636363;
-		}
-
-		.main-nav h1, .main-nav h2, .main-nav h3, .main-nav h4, .main-nav h5, .main-nav h6 {
-			color: #636363;
-		}
-
-		.main-nav blockquote {
-			border-left-color: #dddddd;
-		}
-
-		.main-nav code {
-			background: rgba(222, 222, 222, 0.25);
-			border-color: #dddddd;
-		}
-
-		.main-nav hr {
-			border-bottom-color: #dddddd;
-		}
-
-		.main-nav + #main {
+		/* TODO: check */
+		.js-main-nav + #main {
 			padding-top: 4.25em;
+			border: red 12px solid;
 		}
 
-		.main-nav ul {
+		.js-main-nav ul {
 			margin: 0;
-			padding: 0;
 			list-style: none;
 		}
 
-			.main-nav ul li {
+			.js-main-nav ul li {
 				-webkit-transition: margin 0.2s ease;
 				transition: margin 0.2s ease;
 				margin: 0 0.35em;
@@ -3436,7 +3422,7 @@ input, select, textarea {
 				vertical-align: middle;
 			}
 
-				.main-nav ul li a {
+				.js-main-nav ul li a {
 					-webkit-transition: font-size 0.2s ease;
 					transition: font-size 0.2s ease;
 					display: inline-block;
@@ -3449,26 +3435,26 @@ input, select, textarea {
 					        box-shadow: inset 0 0 0 1px transparent;
 				}
 
-					.main-nav ul li a.active {
+					.js-main-nav ul li a.active {
 						/* background-color: #ffffff; */
 						color: var(--green-txt);
 						-webkit-box-shadow: none;
 						        box-shadow: none;
 					}
 
-		.main-nav.alt {
+		.js-main-nav.alt {
 			position: fixed;
-			top: 0;
-			left: 0;
-			padding: 0.5em 1em;
+			/* top: 0;
+			left: 0; */
+			/* padding: 0.5em 1em; */
 			background-color: var(--secondary-bg);
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
+			/* border-top-left-radius: 0;
+			border-top-right-radius: 0; */
 			z-index: 10000;
 		}
 
-			.main-nav.alt ul li {
-				margin: 0 0.175em;
+			.js-main-nav.alt ul li {
+				/* margin: 0 0.175em; */
 			}
 
 	/* ------Burger menu section-------- */
@@ -3504,17 +3490,17 @@ input, select, textarea {
 	}
 
 	/* todo: maybe add a class to the div */
-	.main-nav.collapse + .burger-menu-btn > div{
+	.js-main-nav.collapse + .burger-menu-btn > div{
 	transform: translateY(10px) rotate(-45deg);
 	}
 
-	.main-nav.collapse + .burger-menu-btn > div:nth-child(2){
+	.js-main-nav.collapse + .burger-menu-btn > div:nth-child(2){
 		opacity: 0;
 		transform: rotate(0deg) scale(0.2, 0.2);
 
 	}
 
-	.main-nav.collapse + .burger-menu-btn > div:nth-child(3){
+	.js-main-nav.collapse + .burger-menu-btn > div:nth-child(3){
 		transform: translateY(-10px) rotate(45deg);
 	}
 
@@ -3526,15 +3512,16 @@ input, select, textarea {
 			}
 
 
-			.main-nav {
-				position: relative;
+			.js-main-nav {
+				position: static;
 			}
 
-				.main-nav.alt ul li a {
-					font-size: 0.9em;
+				.js-main-nav.alt ul li a {
+					/* font-size: 0.9em; */
 				}
 
-			.main-nav + #main {
+				/* TODO: check */
+			.js-ain-nav + #main {
 				padding-top: 0;
 			}
 
