@@ -4165,7 +4165,10 @@ a.yi-link::after {
 }
 
 
-
+/* temporary */
+#contact {
+	min-height: 400px;
+}
 
 
 
