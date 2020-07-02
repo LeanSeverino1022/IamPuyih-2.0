@@ -13,20 +13,23 @@
         xxsmall: [null, '360px']
     })
 
+    //todo: remove or update later.. doesn't do anything currently
+    $('div.spotlight').scrollex({
+        mode: 'middle',
+        enter: function() {
+            // alert('pota')
+        },
+        leave: function() {
+        }
+    })
+
+
     // Nav.
     var $nav = $('.js-main-nav')
 
     if ($nav.length) {
-        // Shrink effect.
-        $main.scrollex({
-            mode: 'top',
-            enter: function() {
-                $nav.addClass('alt')
-            },
-            leave: function() {
-                $nav.removeClass('alt')
-            }
-        })
+
+        enableStickyNav($nav);
 
         // Links.
         var $nav_a = $nav.find('a')
@@ -217,9 +220,9 @@
             if(!nav) throw new Error("No elements matched by " + this.selector);
             var navBtn = document.querySelector('.burger-menu-btn');
 
-            //toggle burger menu animation
+            //toggle burger menu animation and prevent scroll if menu is open
             $('.burger-menu-btn').click(function() {
-                nav.classList.toggle('collapse')
+                nav.classList.toggle('mobile-menu-open');
             })
 
             /*Toggle dropdown list*/
@@ -267,8 +270,8 @@
                 el.addEventListener('click', e => {
                     nevMenuList.classList.add('hidden');
 
-                    if(nav.classList.contains('collapse')) {
-                        nav.classList.remove("collapse");
+                    if(nav.classList.contains('mobile-menu-open')) {
+                        nav.classList.remove("mobile-menu-open");
                     }
 
                 })
@@ -305,3 +308,32 @@ var galleryModal = {
         })
     }
 }
+
+
+// STICKY NAV EFFECT - reusable by yih
+function enableStickyNav($nav) {
+
+    //get header(in this case #home) height -
+    const hdr = $('#home').height();
+    const stickyClassname = "alt";
+
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > hdr) {
+            $nav.addClass(stickyClassname);
+
+        } else {
+            $nav.removeClass(stickyClassname);
+        }
+    });
+}
+
+
+//todo: keep for now but no-scroll doesn't work for now
+// everytime we resize to larger screen, remove the no-scroll class which is only relevant on small
+//screens with the dropdown menu / hamburger menu style
+// window.matchMedia('(min-width: 636px)').addListener( function() {
+//     if(this.matches) {
+//         document.body.classList.remove("no-scroll");
+//     }
+// })

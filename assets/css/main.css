@@ -118,7 +118,7 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background: #1B1F23;
+		background: #13191E;
 		color: #fff;
 	}
 
@@ -3201,10 +3201,10 @@ input, select, textarea {
 
 /* HOME / TOP MOST INTRO */
 	#home {
-		height: 85vh;
+		height: 100vh;
 		-webkit-transition: all 1s ease;
 		transition: all 1s ease;
-		background: linear-gradient(to bottom, #52437b, #1a1e22);
+		background: linear-gradient(to bottom, #52437b, #13191E);
 	}
 
 	#home h1 {
@@ -3346,21 +3346,20 @@ input, select, textarea {
 		top:0;
 		left: 0;
 		width: 100%;
-		height: auto;
-		min-height: 60px;
+		height: 60px;
 		background-color: none;
 		z-index: 1;
 	}
 
 	.main-nav-list {
-		background-color: var(--secondary-bg);
+		background-color: #13191e;
 		text-align: center;
 		font-size: 2em;
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding: 1em;
+		padding: .5em 1em;
 
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
@@ -3390,11 +3389,21 @@ input, select, textarea {
 	}
 
 	@media screen and (min-width: 736px) {
+
+		#home {
+			height: calc(100vh - 60px);
+		}
+
 		/* override hidden on large screens. we want the nav visibile always */
 		.main-nav-list, .main-nav-list.hidden {
 			display: block;
+			max-width: 1500px;
+			margin: 0 auto;
 			height: auto;
 			font-size: 1em;
+			background: none;
+			padding: .5em 3em;
+
 		}
 
 		.js-main-nav ul li {
@@ -3447,15 +3456,17 @@ input, select, textarea {
 			/* top: 0;
 			left: 0; */
 			/* padding: 0.5em 1em; */
-			background-color: var(--secondary-bg);
+			background-color: rgb(19, 25, 30, .92);
+			border-bottom: 2px solid #2b363f;
 			/* border-top-left-radius: 0;
 			border-top-right-radius: 0; */
 			z-index: 10000;
 		}
 
-			.js-main-nav.alt ul li {
-				/* margin: 0 0.175em; */
+			.js-main-nav.alt .main-nav-list {
+				background: #13191e;
 			}
+
 
 	/* ------Burger menu section-------- */
 	.burger-menu-btn {
@@ -3482,25 +3493,25 @@ input, select, textarea {
 	.burger-menu-btn > div{
 		display: block;
 		width: 30px;
-		height: 5px;
-		margin-bottom: 5px;
-		background: #ffec08;
+		height: 2px;
+		margin-bottom: 9px;
+		background: #fff;
 		transform-origin: center;
 		transition: .5s;
 	}
 
 	/* todo: maybe add a class to the div */
-	.js-main-nav.collapse + .burger-menu-btn > div{
-	transform: translateY(10px) rotate(-45deg);
+	.js-main-nav.mobile-menu-open + .burger-menu-btn > div{
+	transform: translateY(11.5px) rotate(-50deg);
 	}
 
-	.js-main-nav.collapse + .burger-menu-btn > div:nth-child(2){
+	.js-main-nav.mobile-menu-open + .burger-menu-btn > div:nth-child(2){
 		opacity: 0;
 		transform: rotate(0deg) scale(0.2, 0.2);
 
 	}
 
-	.js-main-nav.collapse + .burger-menu-btn > div:nth-child(3){
+	.js-main-nav.mobile-menu-open + .burger-menu-btn > div:nth-child(3){
 		transform: translateY(-10px) rotate(45deg);
 	}
 
@@ -3514,6 +3525,10 @@ input, select, textarea {
 
 			.js-main-nav {
 				position: static;
+			}
+
+			.js-main-nav.alt .main-nav-list {
+				background: none;
 			}
 
 				.js-main-nav.alt ul li a {
@@ -3530,11 +3545,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		/* background-color: rgba(46,53,67,.8); #2E3543; */
-		background-color:rgba(27,31,35,.7);
-
 		border-bottom: .5px solid #878787;
-
 		border-radius: var(--border-radius).25em;
 	}
 
@@ -4035,7 +4046,7 @@ input, select, textarea {
 #main #exp,
 #main #contact,
 #main #works {
-	background-color: #1B1F23;
+	background-color: #13191E;
 }
 
 
@@ -4165,10 +4176,6 @@ a.yi-link::after {
 }
 
 
-/* temporary */
-#contact {
-	min-height: 400px;
-}
 
 
 
