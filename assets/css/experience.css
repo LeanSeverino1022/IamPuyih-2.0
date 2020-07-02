@@ -1,13 +1,13 @@
 .ps-timeline-sec {
     color: var(--secondary-txt);
     position: relative;
-    
+
     /* background: #000; */
   }
   .ps-timeline-sec .container {
     position: relative;
   }
-  
+
   .ps-timeline-sec .container ol.ps-timeline {
     margin: 390px 0 260px;
     padding: 0;
@@ -40,7 +40,7 @@
   .ps-timeline-sec .container ol.ps-timeline li span.ps-sp-top:before {
 
     font-family: 'Font Awesome 5 Free'; font-weight: 900;  content: "\f30c";
-    color: #52437b; 
+    color: #52437b;
     position: absolute;
     top: -55px;
     left: 13px;
@@ -48,9 +48,9 @@
   }
 
   .ps-timeline-sec .container ol.ps-timeline li span.ps-sp-bot:before {
-   
+
     font-family: 'Font Awesome 5 Free'; font-weight: 900;  content: "\f309";
-    color: #52437b; 
+    color: #52437b;
     position: absolute;
     /* top: -50px;
     left: 13px; */
@@ -65,7 +65,7 @@
     margin-bottom: 130px;
     width: 100%;
   }
-  
+
   /* graduation */
   .ps-timeline-sec .container ol.ps-timeline li:nth-child(1) .img-handler-top {
     margin-bottom: 100px;
@@ -98,13 +98,13 @@
      max-width: 220px;
   }
   .ps-timeline li:nth-child(2) img{
-      max-width: 120px;
+      max-width: 160px;
   }
   .ps-timeline li:nth-child(3) img{
         max-width: 160px;
   }
   .ps-timeline li:nth-child(4) img{
-    max-width: 220px;
+    max-width: 200px;
   }
 
   /* end of custom img sizes for images of different size */
@@ -123,18 +123,18 @@
     position: absolute;
     margin-top: 35px;
   }
- 
-  /* 
+
+  /*
     Media queries
   */
-  
+
   @media screen and (max-width: 767px) {
-    
+
     /* The big screen layout was too complex. Need to remove almosta all styles first */
 
     .ps-timeline-sec .container ol.ps-timeline {
       margin: 10px 0 0 25px;
-      
+
       border-left: 2px solid #52437b;
       padding-left: 0 !important;
       padding-top: 120px !important;
@@ -152,13 +152,13 @@
     /**** section image and text ****/
     .ps-timeline-sec .container ol.ps-timeline li {
       width: 100%;
-      margin-bottom: 50px;      
+      margin-bottom: 50px;
       height: auto;;
     }
 
     .ps-timeline-sec .container ol.ps-timeline li:last-child {
       margin-bottom: 0;
-    } 
+    }
 
     .ps-timeline-sec .container ol.ps-timeline li .img-handler-top,
     .ps-timeline-sec .container ol.ps-timeline li .img-handler-bot {
@@ -172,7 +172,7 @@
        position: static;
        margin: 0;
     }
-  
+
     /**** END section image and text ****/
 
 
@@ -193,7 +193,6 @@
       content: none !important;
     }
 
-    /* END OF HIDES THE BRANCHES/arrows ON SMALL SCREENS */ 
+    /* END OF HIDES THE BRANCHES/arrows ON SMALL SCREENS */
 
   }
- 
