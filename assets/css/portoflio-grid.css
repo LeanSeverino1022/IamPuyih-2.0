@@ -19,13 +19,11 @@ a:link {
     }
 
     li.portfolio-grid-item {
-      margin: 0;
-      width: 33.33%;
-      max-width: 400px;
-
-      height: 100%;
-      padding: 5px !important;
-      overflow: hidden;
+        margin: 0;
+        padding: 5px !important;
+        overflow: hidden;
+        flex-grow: 1;
+        width: 33%;
     }
 
 
@@ -142,6 +140,7 @@ a:link {
 
       .portfolio-grid  li {
           width: 100%;
+          max-width: 400px;
           margin-bottom: 40px;
       }
   }
