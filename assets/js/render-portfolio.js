@@ -103,7 +103,7 @@ if (typeof myPortfolio === 'undefined') {
     ];
 
     window.overlayData = [{
-        content: "<h1><a target='_blank' class='yi-link txt-green' href='https://www.resultmaps.com/'>Resultmaps</a></h1><p>is a peak performance platform. An application designed to help individuals, teams, and teams of teams. I'm a long-time member of the team and I have contributed to the development of different tools such as Gantt chart, kanban boards, etc. I also lead the development of the main mindmap / tree diagram feature. I'm mostly used to work on old and new Javascript-heavy projects and fix existing complex css issues.</p>",
+        content: "<p><a target='_blank' class='yi-link txt-green' href='https://www.resultmaps.com/'>Resultmaps</a> is a peak performance platform. An application designed to help individuals, teams, and teams of teams. I'm a long-time member of the team and I have contributed to the development of different tools such as Gantt chart, kanban boards, etc. I also lead the development of the main mindmap / tree diagram feature. I'm mostly used to work on old and new Javascript-heavy projects and fix existing complex css issues.</p>",
     }]
 
     window.myPortfolio.renderWorks = function() {

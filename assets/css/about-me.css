@@ -8,7 +8,7 @@ body{
 }
 
 #main {
-    background: #1B1F23;    
+    background: #1B1F23;
 }
 
 #main > .main {
@@ -24,6 +24,11 @@ html {
 html,
 body {
   height: 100%;
+}
+
+body {
+  background: rgb(19,25,30);
+
 }
 
 h2 {
@@ -223,12 +228,12 @@ footer{
     display: block;
     position: relative;
     border-radius: 0;
- 
+
   }
 
   .hero .logo {
     background-color: #2c2538;
-    margin-bottom: 50px;  
+    margin-bottom: 50px;
   }
   .hero nav {
     font-size: 1.7em;
@@ -240,4 +245,14 @@ footer{
     width: 100%;
   }
 
+}
+
+
+/*  */
+header {
+  border: 1px #e1e4e8 solid !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }

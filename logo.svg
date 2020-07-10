@@ -1,0 +1,14 @@
+<svg id="my_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 40 320 230" style="height: 3em;width: 3em;">
+                     <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+                     <g>
+                        <rect fill="none" id="canvas_background" height="342" width="322" y="-1" x="-1"></rect>
+                     </g>
+                     <g>
+                        <title>Leandro Severino</title>
+                        <rect class="logo-border" fill="none" stroke-width="9" x="73.50546" y="64.13352" width="175.67067" height="176.0422" id="svg_19" stroke="#fff" transform="rotate(44.23734664916992 161.34078979492188,152.15461730957028) "></rect>
+                        <path fill="none" stroke-width="9" stroke-opacity="null" opacity="1" d="m167.5,67c0,0 -88,87.00565 -88,87.00565l64.63559,60.1582" id="svg_25" stroke="#fff"></path>
+                        <path fill="none" stroke-width="9" stroke-opacity="null" fill-opacity="null" opacity="1" d="m191,94.5c-1.404,1.44445 -58.5,58.25926 -58.5,58.25926l33.728,32.74074" id="svg_28" stroke="#fff"></path>
+                        <path fill="none" stroke-width="9" stroke-opacity="null" fill-opacity="null" opacity="1" d="m161,237l86,-83.89474c0,0 -26.88202,-25.10526 -26.88202,-25.10526c0,0 -59.14045,55.89474 -59.14045,55.89474" id="svg_31" stroke="#fff"></path>
+                     </g>
+                  </svg>

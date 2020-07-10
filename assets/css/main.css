@@ -4153,13 +4153,13 @@ a.yi-link::after {
 /* 1. GALLERY MODALS */
 .gallery-modal{
     display: none;
-	background: #412F79;
+
 	width: 60%;
 	max-width: 500px;
 	min-width: 280px;
 	padding: 1em;
 	color: #fff;
-    background-image: linear-gradient(135deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%);
+
 }
 
 .gallery-modal .content p {

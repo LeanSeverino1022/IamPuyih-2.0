@@ -291,9 +291,9 @@ var galleryModal = {
 
     show: function(index) {
         this.DOM.container.popup({
-            color: 'rgb(73, 73, 110)',
+            color: 'rgb(0, 0, 0)',
             // color: 'white',
-            opacity: 0.9,
+            opacity: 0.95,
             transition: '0.3s',
             scrolllock: true,
             // blur: false,
