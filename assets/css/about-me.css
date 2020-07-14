@@ -1,6 +1,7 @@
-
-body{
-    background: none;
+body {
+  background: none;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 #wrapper {
@@ -8,14 +9,9 @@ body{
 }
 
 #main > .main {
-    padding: 2em 5em;
+  padding: 2em 5em;
 }
 
-
-html {
-  font-size: 21px;
-  font-family: "Open Sans";
-}
 
 html,
 body {
@@ -23,30 +19,31 @@ body {
 }
 
 body {
-
   position: relative;
-
+  font-family: 'Muli', sans-serif;
 }
 
 h2 {
-  font-family: "Raleway";
-  font-size: 2.7em;
-  font-weight: 900;
-  text-transform: uppercase;
+  /* font-size: 2em; */
+  font-weight: 700;
+  /* text-transform: uppercase; */
   letter-spacing: -2px;
   color: #222;
   margin-bottom: 0.3em;
-  word-spacing: .15em;
+  word-spacing: 0.15em;
 }
 
 p {
-    font-size: 1.2em;
   font-weight: 200;
   color: #0d0d0e;
 }
 
-h2 {
-    color: #959da5;
+.big-text {
+  font-size: 1.2em;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+  background: rgb(16, 6, 59);
 }
 
 .hero {
@@ -56,16 +53,16 @@ h2 {
   border-right: 1px solid #fff;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   left: 0;
-  background: #1c2125;
+  background: #000;
 
-
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, .92), rgba(37, 19, 66, .93)),url('../../images/tokyo_night.png'); */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .85), rgba(0, 0, 0, 0.93)),url('../../images/country.svg');
   /* background: url('../../images/purple-me.jpg'); */
-   /* background-image: url("../../images/purple-me.jpg"); */
-   /* background-image: url("../../images/tokyo_night.png"); */
-  background-size: cover;
+  /* background-image: url("../../images/purple-me.jpg"); */
+  /* background-image: url("../../images/tokyo_night.png"); */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   /* border-radius: 50%; */
@@ -74,11 +71,37 @@ h2 {
   /* opacity: .1; */
 }
 
-.hero-texts {
+.email-link {
+    text-decoration: none;
+    color: #00ffd0;
+}
+
+.email-link:hover {
+  opacity: .6;
+}
+
+.hero-back-btn {
+  align-self: flex-start;
+  color: #fff;
+  padding: 5px 8px;
+  /* border-radius: 10px; */
+  /* border-bottom: #fff 2px solid; */
+  margin: 20px 0 0 20px;
+  align-self: flex-start;
+  margin-bottom: 10%;
+  font-size: 1em;
+}
+
+.hero-content {
   max-width: 500px;
   max-width: 50ch;
   padding: 2em 0;
-  text-align: center;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.hero-content p {
+  color: #a8aaac;
 }
 
 .hero::before {
@@ -86,53 +109,30 @@ h2 {
   background-image: linear-gradient(#eb01a5, #d13531);
 }
 
-.my-image{
-  filter: grayscale(90%);
-  padding-top: 50px;
+.main-content-wrapper {
+    max-width: 50ch;
+    margin: 0 auto;
+}
+
+.my-image {
+  filter: grayscale(85%);
+
+  margin-bottom: 50px;
   /* text-align: center; */
   /* margin-top: 20% !important; */
-/* margin: 0 auto; */
-/* display: block;  position: absolute; */
+  /* margin: 0 auto; */
+  /* display: block;  position: absolute; */
   /* right: 0; */
   /* top: 2em; */
   /* width: 200px; */
   /* height: 200px; */
   /* border: 11px solid green;
-  object-fit: cover; */
-
-
-
-}
-
-.hero .active {
-  background: none;
-  transition: 0.2s;
-}
-.hero .active:before, .hero .active:after {
-  transition: 0.2s;
-  top: 0;
-}
-.hero .active:before {
-  transform: rotate(45deg);
-}
-.hero .active:after {
-  transform: rotate(-45deg);
-}
-.hero .logo {
-  font-size: 1.9em;
-  margin: 0;
-  line-height: 2;
-  background-color: var;
-  margin: 15px 0 0 15px;
-
-  /* opacity: .5; */
+object-fit: cover; */
 }
 
 .logo > img {
   width: 60px;
 }
-
-
 
 .main.content {
   padding-bottom: 50px;
@@ -149,7 +149,7 @@ h2 {
 }
 
 /* footer contact */
-footer{
+footer {
   position: fixed;
   bottom: 0px;
   width: 100%;
@@ -160,11 +160,15 @@ footer{
 
 .contact-info li.email a:before {
   /* background-image: url(../../images/logo.svg); */
-  font-family: 'Font Awesome 5 Free'; font-weight: 900;  content: "\f199";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f199';
   margin-right: 10px;
 }
 .contact-info li.github a:before {
-  font-family: 'Font Awesome 5 Brands'; font-weight: 400;  content: "\f09b";
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  content: '\f09b';
   margin-right: 10px;
 }
 
@@ -179,34 +183,12 @@ footer{
   background: rgb(42, 78, 57);
 }
 
-.contact-info li:not(:first-child) {
-  padding: 0 0 0 30px;
-}
-
-.contact-info li a{
-  font-size: 1.2em;
-  color: rgb(196, 174, 226);
-  text-decoration: none;
-  border: none;
-  transition: width .3s;
-}
-
-#main .contact-info li a:hover{
-  color: rgb(190, 142, 252, .65);
-}
-
 /* end of contact */
 
-
 @media (max-width: 768px) {
-  html {
-    font-size: 18px;
-  }
-
   #main .content {
     padding: 0 1.5em;
   }
-
 
   .hero {
     height: 350px;
@@ -214,24 +196,7 @@ footer{
     display: block;
     position: relative;
     border-radius: 0;
-
   }
-
-  .hero .logo {
-    background-color: #2c2538;
-    margin-bottom: 50px;
-  }
-  .hero nav {
-    font-size: 1.7em;
-  }
-
-  .content {
-    margin-left: 0;
-    padding-top: 0;
-    width: 100%;
-  }
-
 }
-
 
 /*  */
