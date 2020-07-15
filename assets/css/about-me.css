@@ -1,7 +1,11 @@
+html {
+    font-size: 16px;
+}
+
 body {
   background: none;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 #wrapper {
@@ -23,91 +27,93 @@ body {
   font-family: 'Muli', sans-serif;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
 h2 {
-  /* font-size: 2em; */
   font-weight: 700;
-  /* text-transform: uppercase; */
   letter-spacing: -2px;
   color: #222;
-  margin-bottom: 0.3em;
+  margin-bottom: .6em;
+  margin-top: 2em;
   word-spacing: 0.15em;
 }
 
 p {
-  font-weight: 200;
-  color: #0d0d0e;
+    margin:  0 0 2em 0;
+    color: #0d0d0e;
 }
 
 .big-text {
-  font-size: 1.2em;
-  font-weight: 700;
-  line-height: 1.5;
-  color: #ffffff;
+  color: #fafafa;
   background: rgb(16, 6, 59);
 }
 
 .hero {
-  width: 40%;
-  height: 100%;
-  position: fixed;
+  padding:  0 1.4rem;
   border-right: 1px solid #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  left: 0;
   background: #000;
-
   background: linear-gradient(to bottom, rgba(0, 0, 0, .85), rgba(0, 0, 0, 0.93)),url('../../images/country.svg');
-  /* background: url('../../images/purple-me.jpg'); */
-  /* background-image: url("../../images/purple-me.jpg"); */
-  /* background-image: url("../../images/tokyo_night.png"); */
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  /* border-radius: 50%; */
-  /* background: red; */
-
-  /* opacity: .1; */
 }
 
-.email-link {
-    text-decoration: none;
-    color: #00ffd0;
+.hero h1 {
+    font-weight: 700;
+
 }
 
-.email-link:hover {
-  opacity: .6;
+
+@media screen and (min-width: 768px) {
+   .hero {
+    position: fixed;
+    width: 40%;
+    min-height: 100vh;
+   }
+
+   .hero h1 {
+    /* font-size: 2em; */
+    font-weight: 700;
+    margin-bottom: .5em;
+
+   }
 }
 
 .hero-back-btn {
   align-self: flex-start;
   color: #fff;
-  padding: 5px 8px;
-  /* border-radius: 10px; */
-  /* border-bottom: #fff 2px solid; */
-  margin: 20px 0 0 20px;
-  align-self: flex-start;
-  margin-bottom: 10%;
-  font-size: 1em;
+  margin: 1em 0 0.5em 0;
 }
+
+.hero-email-link {
+    text-decoration: none;
+    color: #00ffd0;
+}
+
+.hero-email-link:hover {
+  opacity: .6;
+  border: 1px solid red;
+}
+
 
 .hero-content {
   max-width: 500px;
   max-width: 50ch;
-  padding: 2em 0;
-  text-align: left;
+  padding: 3em 0;
+  text-align: c;
   flex-grow: 1;
 }
 
 .hero-content p {
   color: #a8aaac;
+  line-height: 1.6
 }
 
-.hero::before {
-  content: '';
-  background-image: linear-gradient(#eb01a5, #d13531);
-}
 
 .main-content-wrapper {
     max-width: 50ch;
@@ -115,24 +121,28 @@ p {
 }
 
 .my-image {
+  margin: 3em 0;
   filter: grayscale(85%);
-
-  margin-bottom: 50px;
-  /* text-align: center; */
-  /* margin-top: 20% !important; */
-  /* margin: 0 auto; */
-  /* display: block;  position: absolute; */
-  /* right: 0; */
-  /* top: 2em; */
-  /* width: 200px; */
-  /* height: 200px; */
-  /* border: 11px solid green;
-object-fit: cover; */
 }
 
-.logo > img {
-  width: 60px;
-}
+ /* tricky queries... you need to really test carefully when you change content  */
+ @media screen and (min-width: 768px)  {
+    .my-image {  display:none; }
+ }
+
+ @media screen and (min-width: 1024px) and (min-height: 768px)  {
+    .my-image {
+        display: inherit;
+        width: 120px;
+        margin: 2em 0;
+      }
+ }
+
+ @media screen and (min-width: 1280px ) {
+    .my-image { width: auto; }
+ }
+
+
 
 .main.content {
   padding-bottom: 50px;
@@ -147,56 +157,3 @@ object-fit: cover; */
   padding: 4em 1.5em;
   overflow: hidden;
 }
-
-/* footer contact */
-footer {
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  /* height: 50px; */
-  overflow: hidden;
-  display: none;
-}
-
-.contact-info li.email a:before {
-  /* background-image: url(../../images/logo.svg); */
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: '\f199';
-  margin-right: 10px;
-}
-.contact-info li.github a:before {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
-  content: '\f09b';
-  margin-right: 10px;
-}
-
-.contact-info {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  border-top: #fff 1px solid;
-  padding: 2px;
-  background: rgb(42, 78, 57);
-}
-
-/* end of contact */
-
-@media (max-width: 768px) {
-  #main .content {
-    padding: 0 1.5em;
-  }
-
-  .hero {
-    height: 350px;
-    width: 100%;
-    display: block;
-    position: relative;
-    border-radius: 0;
-  }
-}
-
-/*  */

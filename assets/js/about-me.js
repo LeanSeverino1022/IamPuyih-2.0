@@ -1,4 +1,4 @@
-//hamburger menu
+//TODO: change these to modal for contact form
 
 
 $(document).ready(function () {
