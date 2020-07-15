@@ -1,3 +1,26 @@
+/* MY simple CSS RESET */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+/* end reset */
+
+
 html {
     font-size: 16px;
 }
@@ -12,11 +35,6 @@ body {
   width: 100%;
 }
 
-#main > .main {
-  padding: 2em 5em;
-}
-
-
 html,
 body {
   height: 100%;
@@ -27,8 +45,12 @@ body {
   font-family: 'Muli', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    margin: 0;
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
 }
 
 h2 {
@@ -151,7 +173,7 @@ p {
 /* contact info in the left section */
 
 .content {
-  width: 60%;
+  /* width: 60%; */
   min-height: 100%;
   margin-left: 40%;
   padding: 4em 1.5em;
