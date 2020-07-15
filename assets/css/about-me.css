@@ -1,3 +1,12 @@
+:root {
+  --body-padding-sides: 1.4rem;
+}
+
+/* Media Queries
+
+ 768 - split-screen breakpoint
+*/
+
 /* MY simple CSS RESET */
 
 html {
@@ -5,24 +14,35 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 /* end reset */
 
-
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
@@ -47,24 +67,23 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-a:hover {
-  color: #fff;
-}
 
 h2 {
   font-weight: 700;
   letter-spacing: -2px;
   color: #222;
-  margin-bottom: .6em;
+  margin-bottom: 0.6em;
   margin-top: 2em;
   word-spacing: 0.15em;
+  color: #000;
 }
 
 p {
-    margin:  0 0 2em 0;
-    color: #0d0d0e;
+  margin: 0 0 2em 0;
+  color: #0d0d0e;
 }
 
 .big-text {
@@ -73,37 +92,40 @@ p {
 }
 
 .hero {
-  padding:  0 1.4rem;
+  padding: 0 var(--body-padding-sides);
   border-right: 1px solid #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: #000;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, .85), rgba(0, 0, 0, 0.93)),url('../../images/country.svg');
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.93)
+    ),
+    url('../../images/country.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .hero h1 {
-    font-weight: 700;
-
+  font-weight: 700;
+  color: #fafafa;
 }
 
-
 @media screen and (min-width: 768px) {
-   .hero {
+  .hero {
     position: fixed;
     width: 40%;
     min-height: 100vh;
-   }
+  }
 
-   .hero h1 {
-    /* font-size: 2em; */
+  .hero h1 {
+    color: #fd8181;
     font-weight: 700;
-    margin-bottom: .5em;
-
-   }
+    margin-bottom: 0.5em;
+  }
 }
 
 .hero-back-btn {
@@ -112,16 +134,29 @@ p {
   margin: 1em 0 0.5em 0;
 }
 
+.hero-back-btn a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #fff;
+    -webkit-transition: width .3s;
+    transition: width .3s;
+}
+
+.hero-back-btn a:hover::after {
+  width: 100%;
+}
+
 .hero-email-link {
-    text-decoration: none;
-    color: #00ffd0;
+  text-decoration: none;
+  color: #00ffd0;
 }
 
 .hero-email-link:hover {
-  opacity: .6;
+  opacity: 0.6;
   border: 1px solid red;
 }
-
 
 .hero-content {
   max-width: 500px;
@@ -133,13 +168,7 @@ p {
 
 .hero-content p {
   color: #a8aaac;
-  line-height: 1.6
-}
-
-
-.main-content-wrapper {
-    max-width: 50ch;
-    margin: 0 auto;
+  line-height: 1.6;
 }
 
 .my-image {
@@ -147,35 +176,43 @@ p {
   filter: grayscale(85%);
 }
 
- /* tricky queries... you need to really test carefully when you change content  */
- @media screen and (min-width: 768px)  {
-    .my-image {  display:none; }
- }
-
- @media screen and (min-width: 1024px) and (min-height: 768px)  {
-    .my-image {
-        display: inherit;
-        width: 120px;
-        margin: 2em 0;
-      }
- }
-
- @media screen and (min-width: 1280px ) {
-    .my-image { width: auto; }
- }
-
-
-
-.main.content {
-  padding-bottom: 50px;
+/* tricky queries... you need to really test carefully when you change content  */
+@media screen and (min-width: 768px) {
+  .my-image {
+    display: none;
+  }
 }
 
-/* contact info in the left section */
+@media screen and (min-width: 1024px) and (min-height: 750px) {
+  .my-image {
+    display: inherit;
+    width: 120px;
+    margin: 2em 0;
+  }
+}
 
-.content {
-  /* width: 60%; */
+@media screen and (min-width: 1280px) {
+  .my-image {
+    width: auto;
+  }
+}
+
+.main-content-wrapper {
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+.main-content {
+  padding-bottom: 50px;
   min-height: 100%;
-  margin-left: 40%;
-  padding: 4em 1.5em;
+
+  padding: 4em var(--body-padding-sides);
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    width: 60%;
+    margin-left: 40%;
+  }
 }
