@@ -1,5 +1,5 @@
 @import url(all.min.css);
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+/* @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400'; */
 
 :root {
 	/* --brand-color: #EDC139;  */
@@ -124,7 +124,7 @@ input, select, textarea {
 
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica,sans-serif;
+		font-family: "Source Sans Pro", "Segoe UI", Tahoma, sans-serif;
 		font-size: 17pt;
 		font-weight: 300;
 		line-height: 1.65;
