@@ -5,26 +5,27 @@ ul.skills-diagram  {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    max-width: 350px;    
-    -webkit-box-pack: center;    
-        -ms-flex-pack: center;    
+    max-width: 350px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
             justify-content: center;
    margin-bottom: 50px;
    letter-spacing: 2px;
+   padding-left: 1em;
 }
 
 .skills-diagram li.item {
   text-decoration: none;
   list-style: none;
   padding: 15px;
-  border: 1px solid; 
-  border-image: linear-gradient(90deg, #A065AA 0%, #4F72B8 50%) 1; 
+  border: 1px solid;
+  border-image: linear-gradient(90deg, #A065AA 0%, #4F72B8 50%) 1;
 }
 
 @media screen and (max-width: 980px){
   .skills-diagram  {
     padding: 100px 0 60px;
-   
+
   }
 
   .skills-diagram .item {
