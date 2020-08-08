@@ -1193,7 +1193,6 @@ input, select, textarea {
 				}
 
 		header.major p {
-			font-size: 1.25em;
 			letter-spacing: -0.025em;
 		}
 
@@ -2428,28 +2427,40 @@ input, select, textarea {
 	/* YI ADDITIONAL SECTIONS / STYLES -TODO REORGANIZE LATER ON */
 /* contact section */
 #contact .contact-form {
-	padding: 2em;
-	/* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
+	/* padding: 2em; */
+	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0,0,0,0.22);
 	width: 100%;
 	max-width: 800px;
 	margin: 0 auto;
 	letter-spacing: 1.5px;
 }
 
-#contact .contact-form input,
-#contact .contact-form textarea {
-	/* background-color: transparent; */
-	letter-spacing: 1.5px;
-	/* font-size: .8em; */
+#contact p {
+	color: #beb9b9 !important;
 }
 
-@media screen and (max-width: 480px) {
+.contact-form input,
+.contact-form textarea {
+	background-color: transparent;
+	letter-spacing: 1.2px;
+}
 
-	#contact .contact-form {
-		padding: 0;
+.contact-form-control {
+	margin-top: 20px;
+	width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+	.contact-form .row {
+		display: flex;
+		justify-content: space-between;
 	}
-
+	.contact-form .row .contact-form-control {
+		width: 48%;
+	}
 }
+
+
 
 /* experience section */
 #main #exp,
