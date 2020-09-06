@@ -1,13 +1,10 @@
-/* 
+/*
     by leandro Severino
-
 */
 
 $(document).ready(function () {
     window.myPortfolio.renderWorks();
-    window.myPortfolio.enableCardOverlayOnMobile(); 
-
-   
+    window.myPortfolio.enableCardOverlayOnMobile();
 });
 
 window.USER_IS_USING_TOUCH_DEVICE = false;
@@ -19,7 +16,7 @@ try {
  catch (e) {
     window.USER_IS_USING_TOUCH_DEVICE = false;
  }
-   
+
 if (typeof myPortfolio === 'undefined') {
     window.myPortfolio = {};
 }
@@ -33,38 +30,37 @@ if (typeof myPortfolio === 'undefined') {
             description:'ResultMaps is an application that helps teams and people to create clear roadmaps to track tasks and focus on results.',
             class: ["open-overlay"], //custom class
             img: 'images/gallery/rm.jpg',
-            actionLinks: { 
-                // {[name of the button] : [link]} 
+            actionLinks: {
+                // {[name of the button] : [link]}
                 "Learn more" : "javascript:galleryModal.show(0);",
             }
-            
+
         },
         {
-            
             title: null,
             description: "EverThread is a visualization platform. I've helped the company develop tools that give customers the ability to customize products across categories in a virtual environment.",
             class: [], //custom class
             img: 'images/gallery/prod-visual.jpg',
-            actionLinks: { 
+            actionLinks: {
                 "Learn more" : "./product-demo.html"
             }
-        }, 
+        },
         {
             title: 'Interactive Tree Diagram',
             description:'visually represent data hierarchy in a tree-like structure. Features include switching orientation, zooming & panning, etc. ',
             class: [], //custom class
             img: 'images/gallery/tree.jpg',
-            actionLinks: { 
+            actionLinks: {
                  "View Demo" : "https://leanseverino1022.github.io/tree-diagram/"
             }
         },
-     
+
         {
             title: 'Drag-to-scroll library',
             description:'Tiny Library to easily enable click and drag scrolling to any content. Scroll just like how you do it on a tablet or smartphone',
             class: [], //custom class
             img: 'images/gallery/dragtoscroll.png',
-            actionLinks: {                 
+            actionLinks: {
                 "View Online" : "https://leanseverino1022.github.io/dragToScroll/",
                 "View source on Github" : "https://github.com/LeanSeverino1022/dragToScroll"
             }
@@ -73,7 +69,8 @@ if (typeof myPortfolio === 'undefined') {
             description:"Created a game with ImpactJS, a JavaScript Game Engine. I had to replace / remove the original assets becaue I cannot use them for my personal portfolio.",
             class: [], //custom class
             img: 'images/gallery/sinkem-game.jpg',
-            actionLinks: {                 
+            overlayMsg: 'Note: This Game was created for desktop',
+            actionLinks: {
                 "Play Game" : "https://puyihsdumpsite.000webhostapp.com/game/index.html",
                 "View source on Github" : "https://github.com/LeanSeverino1022/sink-Em/blob/master/README.markdown"
             }
@@ -83,30 +80,30 @@ if (typeof myPortfolio === 'undefined') {
             description:'Easy to edit template for search & filter React projects.',
             class: [], //custom class
             img: 'images/gallery/search-filter-react.png',
-            actionLinks: { 
-                // {[name of the button] : [link]} 
+            actionLinks: {
+                // {[name of the button] : [link]}
                 "View Online" : "https://leanseverino1022.github.io/search-and-filter-with-react/",
                 "View Source on Github" : "https://github.com/LeanSeverino1022/search-and-filter-with-react"
             }
-            
+
         },
-        
+
         // {
         //     title: 'freeCodeCamp Certifications',
         //     // description: 'Certificate curriculum should take approximately 300 hours to complete and includes 5 required projects.',
         //     description: '',
         //     class: [], //custom class
         //     img: 'images/gallery/fcc.jpg',
-        //     actionLinks: { 
+        //     actionLinks: {
         //         "Algorithms and Data Structures" : "https://www.freecodecamp.org/certification/leanseverino1022/javascript-algorithms-and-data-structures",
-        //         'Responsive Web Design' : 'https://www.freecodecamp.org/certification/leanseverino1022/responsive-web-design'             
+        //         'Responsive Web Design' : 'https://www.freecodecamp.org/certification/leanseverino1022/responsive-web-design'
         //     }
         // },
-    
+
     ];
 
     window.overlayData = [{
-        content: "<h1><a target='_blank' class='yi-link txt-green' href='https://www.resultmaps.com/'>Resultmaps</a></h1><p>is a peak performance platform. An application designed to help individuals, teams, and teams of teams. I'm a long-time member of the team and I have contributed to the development of different tools such as Gantt chart, kanban boards, etc. I also lead the development of the main mindmap / tree diagram feature. I'm mostly used to work on old and new Javascript-heavy projects and fix existing complex css issues.</p>",
+        content: "<p><a target='_blank' class='yi-link txt-green' href='https://www.resultmaps.com/'>Resultmaps</a> is a peak performance platform. An application designed to help individuals, teams, and teams of teams. I'm a long-time member of the team and I have contributed to the development of different tools such as Gantt chart, kanban boards, etc. I also lead the development of the main mindmap / tree diagram feature. I'm mostly used to work on old and new Javascript-heavy projects and fix existing complex css issues.</p>",
     }]
 
     window.myPortfolio.renderWorks = function() {
@@ -120,8 +117,8 @@ if (typeof myPortfolio === 'undefined') {
             });
 
             const $cardImage = $('<div>')
-                .attr({ class: 'card-image' })       
-                .css('background-image', `url(${item.img})`);   
+                .attr({ class: 'card-image' })
+                .css('background-image', `url(${item.img})`);
                 // const $img = $('<img>').attr({
             //     alt: 'github-ss',
             //     src: item.img
@@ -136,22 +133,25 @@ if (typeof myPortfolio === 'undefined') {
             console.log(item.description);
 
             // text(item.description);
-
             const $cardOverlay = `
                 <div class="card-overlay">
                     <div class="wrapper">
+                    ${ item.overlayMsg ? `<p>${item.overlayMsg}</p>`: '' }
+
+
                     ${Object.keys(item.actionLinks).map(
                         key =>
                             '<a target="_blank" href="'+item.actionLinks[key]+'" class="card-overlay-action">'+ key + '</a>'
                         ).join('')
                     }
-                    </div>                 
+                    </div>
                 </div>`;
 
-            $card.append($cardImage);
+            $card.append($cardImage.append($cardOverlay));
+
             $card.append(
                 $cardContent.append($contentTitle, $cardDesc));
-            $card.append($cardOverlay);
+
 
             // return card. 1 card = 1 project
             return $outerDiv.append($card);
@@ -193,12 +193,14 @@ myPortfolio.fadeUpCardsOnView = function() {
 myPortfolio.enableCardOverlayOnMobile = function(){
 
     if(window.USER_IS_USING_TOUCH_DEVICE) {
-      
+        //hide it by default
+        $('.card-overlay').hide();
+
         $('.card').on('click', function(evt){
             $('.card-overlay').hide();
             $('.card-overlay', this).show();
         })
-    }    
+    }
 }
 
 
