@@ -25,29 +25,27 @@ a:link {
      
 
   .card {
-      position: relative;
-      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
-      -webkit-transition: 0.300s;
-      transition: 0.300s;
-      -webkit-transition: 0.3s;
-      transition: 0.3s; 
-      background: #24292E;
+      background: #13191e;
+      padding: 25px;
   }
   
   .card-image {
-      height: 300px; 
+      position: relative;
+      height: 220px;
       overflow: hidden;
       width: 100%;
-      background-size: cover;
+      background-size: contain;
       background-position: center;
+      background-repeat: no-repeat;
+      background-color: #fff;
   }
   
   .card-desc {
       padding: 10px 20px 0px;
-      height: 150px;
-      overflow: hidden;    
+      height: 0;
+      overflow: hidden;
       border-top: 1px solid rgba(160,160,160,0.2);
+      /* height: 0; */
   }
   
   .card-title {
