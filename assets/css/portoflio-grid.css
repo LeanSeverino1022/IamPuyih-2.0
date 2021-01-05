@@ -34,7 +34,8 @@ a:link {
 
   .card-image {
       position: relative;
-      height: 220px;
+      /* height: 220px; */
+      padding-top: 58%;
       overflow: hidden;
       width: 100%;
       background-size: contain;

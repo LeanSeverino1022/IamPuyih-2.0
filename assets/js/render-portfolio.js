@@ -147,6 +147,7 @@ if (typeof myPortfolio === 'undefined') {
                     </div>
                 </div>`;
 
+            $card.append("<div class='bar'> <p class='bar-title'>SKY GO Desktop </p> <i></i></div>");
             $card.append($cardImage.append($cardOverlay));
 
             $card.append(

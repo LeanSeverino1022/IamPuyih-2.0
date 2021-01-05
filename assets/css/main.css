@@ -96,7 +96,6 @@ select {
 
 	body, input, select, textarea {
 		font-family: "Source Sans Pro", "Segoe UI", Tahoma, sans-serif;
-		font-size: 1pt;
 		font-weight: 300;
 		line-height: 1.65;
 	}
@@ -1317,3 +1316,63 @@ a.yi-link::after {
 	}
 
 }
+
+
+
+/* TODO: organize later. This is ne*/
+
+/* portfolio item title-bars */
+
+.bar {
+    display: block;
+    position: relative;
+    height: 24px;
+    background-color: #ddd;
+    width: 100%;
+    color: #6a6a6a;
+    z-index: 10;
+}
+
+.bar .bar-title {
+    /* content: attr(data-text); */
+    /* text-align: center; */
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: MontSerrat,Tahoma,Arial,sans-serif;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -.5px;
+    color: #8a8a8a;
+}
+
+.bar i,
+.bar i:after,
+.bar i:before {
+	height: 12px;
+    width: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.bar i {
+    background-color: #ff5f57;
+    top: 6px;
+    left: 10px;
+}
+
+
+.bar i:before {
+	content: '';
+    left: 16px;
+    background-color: #ffbd2e;
+
+}
+
+.bar i:after {
+	content: " ";
+    left: 32px;
+    background-color: #28ca41;
+}
+
+/* end portfolio title bars */
