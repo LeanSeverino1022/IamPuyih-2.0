@@ -96,6 +96,7 @@ select {
 
 	body, input, select, textarea {
 		font-family: "Source Sans Pro", "Segoe UI", Tahoma, sans-serif;
+		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
 		line-height: 1.65;
 	}
@@ -1319,7 +1320,7 @@ a.yi-link::after {
 
 
 
-/* TODO: organize later. This is ne*/
+/* TODO: organize later. This are new stuff*/
 
 /* portfolio item title-bars */
 
@@ -1376,3 +1377,24 @@ a.yi-link::after {
 }
 
 /* end portfolio title bars */
+
+
+/* Skills Cloud text  */
+
+#myCanvas {
+	max-width: 100%;
+	font: 300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+h1, h1 > p {
+
+	font-family: 'Rokkitt', serif;
+	font-family: "Source Sans Pro", "Segoe UI", Tahoma, sans-serif;
+
+
+	Font-Family: 'Roboto', Sans-Serif;
+	font-family: 'Roboto Condensed', sans-serif;
+
+Font-Size: 70px !important;
+}
