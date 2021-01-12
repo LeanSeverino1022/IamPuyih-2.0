@@ -111,7 +111,7 @@ p {
 
 .hero h1 {
   font-weight: 700;
-  color: #fafafa;
+  color: #5b8cf9;
 }
 
 @media screen and (min-width: 768px) {
@@ -122,9 +122,10 @@ p {
   }
 
   .hero h1 {
-    color: #9b8278;
+    color: #5b8cf9;
     font-weight: 700;
     margin-bottom: 0.5em;
+    font-size: 3em;
   }
 }
 
@@ -181,7 +182,6 @@ p {
 
 .my-image {
   margin: 3em 0;
-  filter: grayscale(85%);
 }
 
 /* tricky queries... you need to really test carefully when you change content  */
