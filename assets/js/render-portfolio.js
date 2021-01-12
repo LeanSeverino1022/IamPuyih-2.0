@@ -29,7 +29,7 @@ if (typeof myPortfolio === 'undefined') {
             title: null,
             description:'ResultMaps is an application that helps teams and people to create clear roadmaps to track tasks and focus on results.',
             class: ["open-overlay"], //custom class
-            img: 'images/gallery/rm.jpg',
+            img: 'images/gallery/RM.jpg',
             actionLinks: {
                 // {[name of the button] : [link]}
                 "Learn more" : "javascript:galleryModal.show(0);",
@@ -40,7 +40,7 @@ if (typeof myPortfolio === 'undefined') {
             title: null,
             description: "EverThread is a visualization platform. I've helped the company develop tools that give customers the ability to customize products across categories in a virtual environment.",
             class: [], //custom class
-            img: 'images/gallery/prod-visual.jpg',
+            img: 'images/gallery/ET.jpg',
             actionLinks: {
                 "Learn more" : "./product-demo.html"
             }
@@ -59,7 +59,7 @@ if (typeof myPortfolio === 'undefined') {
             title: 'Drag-to-scroll library',
             description:'Tiny Library to easily enable click and drag scrolling to any content. Scroll just like how you do it on a tablet or smartphone',
             class: [], //custom class
-            img: 'images/gallery/dragtoscroll.png',
+            img: 'images/gallery/dragToScroll.jpg',
             actionLinks: {
                 "View Online" : "https://leanseverino1022.github.io/dragToScroll/",
                 "View source on Github" : "https://github.com/LeanSeverino1022/dragToScroll"
@@ -147,7 +147,7 @@ if (typeof myPortfolio === 'undefined') {
                     </div>
                 </div>`;
 
-            $card.append("<div class='bar'> <p class='bar-title'>SKY GO Desktop </p> <i></i></div>");
+            $card.append("<div class='bar'> <p class='bar-title'>  .</p> <i></i></div>");
             $card.append($cardImage.append($cardOverlay));
 
             $card.append(

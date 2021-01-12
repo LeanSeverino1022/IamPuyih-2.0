@@ -11,6 +11,9 @@
 	--secondary-txt: #959da5;
 	--border: #2F363D;
 	--border-radius: var(--border-radius);
+
+	--fontA: 'Roboto', sans-serif; 
+	--fontB: 'Roboto Condensed', sans-serif; 
   }
 
 /* Box sizing rules */
@@ -104,7 +107,7 @@ select {
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-				font-size: 14pt;
+				font-size: 12pt;
 			}
 
 		}
@@ -227,7 +230,7 @@ select {
 		border-color: #BCA437;
 		-webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
-				color: #ffffff !important;
+				color: var(--secondary-txt);
 	}
 
 /* Form */
@@ -332,6 +335,7 @@ ul.actions li {
 		header.major p {
 			max-width: 65ch;
 			margin: 0 auto;
+			color: var(--secondary-txt);
 		}
 
 
@@ -381,6 +385,10 @@ ul.actions li {
 		        justify-content: space-evenly;
 	}
 
+		.spotlight .button {
+			color: var(--green-txt)
+		}
+
 		.spotlight .content {
 			-moz-flex: 1;
 			-ms-flex: 1;
@@ -391,6 +399,8 @@ ul.actions li {
 
 			.spotlight .content p {
 				max-width: 600px;
+				color: var(--secondary-txt);
+				letter-spacing: .5px;
 			}
 
 		.spotlight .image {
@@ -400,6 +410,7 @@ ul.actions li {
 			.spotlight .image img {
 				display: block;
 				width: 16em;
+				box-shadow: -10px -10px #373063;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -471,11 +482,15 @@ ul.actions li {
 	#home h1 {
 		margin: 0 0 0.25em 0;
 		font-size: 3.25em;
+		font-family: var(--fontA);
 	}
 
 	#home p {
 		font-size: 1.25em;
 		letter-spacing: -0.025em;
+		font-family: var(--fontA);
+		color: var(--secondary-txt);
+		font-weight: 400;
 	}
 
 	body.is-preload #home {
@@ -702,7 +717,8 @@ ul.actions li {
 					border: 0;
 					border-radius: var(--border-radius);
 					-webkit-box-shadow: inset 0 0 0 1px transparent;
-					        box-shadow: inset 0 0 0 1px transparent;
+							box-shadow: inset 0 0 0 1px transparent;
+					color: #cbbde6;
 				}
 
 					.js-main-nav ul li a.active {
@@ -1019,8 +1035,8 @@ ul.actions li {
 
 		#main header.major h2:after {
 			background-color: #dddddd;
-			background-image: -webkit-gradient(linear, left top, right top, from(#efa8b0), color-stop(#a89cc8), to(#8cc9f0));
-			background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+			background-image: -webkit-gradient(linear, left top, right top, from(#7edc96), color-stop(#ffffff), to(#4124f5));
+			background-image: linear-gradient(90deg, #7edc96, #ffffff, #4124f5);
 		}
 
 		#main table tbody tr {
@@ -1171,9 +1187,7 @@ ul.actions li {
 	letter-spacing: 1.5px;
 }
 
-#contact p {
-	color: #beb9b9 !important;
-}
+
 
 .contact-form input,
 .contact-form textarea {
@@ -1259,8 +1273,8 @@ a.yi-link::after {
 }
 
 .gradient-image:after {
-    mix-blend-mode: lighten;
-    opacity: .7;
+    mix-blend-mode: hard-light;
+    opacity: .2;
     background: linear-gradient(135deg, #af40ff 0%,   #010C4E 75%);
 }
 
@@ -1387,14 +1401,9 @@ a.yi-link::after {
 }
 
 
-h1, h1 > p {
 
-	font-family: 'Rokkitt', serif;
-	font-family: "Source Sans Pro", "Segoe UI", Tahoma, sans-serif;
-
-
-	Font-Family: 'Roboto', Sans-Serif;
-	font-family: 'Roboto Condensed', sans-serif;
-
-Font-Size: 70px !important;
+/* unique */
+.code-labs-note {
+	color: #a3a3a3;
+    background: black;
 }
