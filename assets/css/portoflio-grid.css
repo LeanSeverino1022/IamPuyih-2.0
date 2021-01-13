@@ -44,6 +44,15 @@ a:link {
       background-color: #fff;
   }
 
+  .card-image::before {
+    content: "";
+    position: absolute;
+    box-shadow: 0 0 40px rgba(0,0,0,.75) inset;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
   .card:hover .card-image {
 
   }
@@ -54,6 +63,8 @@ a:link {
       height: 150px;
       overflow: hidden;
       border-top: 1px solid rgba(160,160,160,0.2);
+      color: var(--secondary-txt);
+
       /* height: 0; */
   }
 
