@@ -10,6 +10,8 @@ function runLogoAnimation(){
   // ANIMATED LOGO
   const svgPath = document.querySelectorAll('path');
 
+  /* Logo border */
+
   anime({
     targets: ['rect.logo-border'],
 

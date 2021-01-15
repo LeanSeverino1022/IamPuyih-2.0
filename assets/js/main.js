@@ -104,8 +104,12 @@ $(document).ready(function() {
                 $this.addClass('active').addClass('active-locked')
             })
             .each(function() {
-                var $this = $(this),
-                    id = $this.attr('href'),
+                var $this = $(this);
+                
+                 // External link? Bail.
+                 if ($this.attr('href').charAt(0) != '#') return
+
+                var id = $this.attr('href'),
                     $section = $(id)
 
                 // No section for this link? Bail.
@@ -470,7 +474,7 @@ var galleryModal = {
 }
 
 
-// STICKY NAV EFFECT - reusable by yih
+// || STICKY NAV EFFECT - reusable by yih
 function enableStickyNav($nav) {
 
     //get header(in this case #home) height -
