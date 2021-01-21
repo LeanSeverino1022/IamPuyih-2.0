@@ -6,14 +6,9 @@ a:link {
 
   ul.portfolio-grid {
       margin: 0 auto;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      flex-wrap: wrap;
+      justify-content: center;
       list-style: none;
       padding: 0;
     }
@@ -22,7 +17,7 @@ a:link {
         margin: 0;
         padding: 5px !important;
         overflow: hidden;
-        flex-grow: 1;
+        /* flex-grow: 1; */
         width: 33%;
     }
 
@@ -74,8 +69,7 @@ a:link {
 
   /* card overlays */
   .card-overlay {
-      -webkit-transition: all 0.3s linear;
-       transition: all 0.3s linear;
+      transition: all 0.3s linear;
       position: absolute;
       top: 0;
       left: 0;
@@ -90,19 +84,10 @@ a:link {
   .card-overlay .wrapper {
       height: 100%; /* make buttons slightly higher than middle */
       width: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
   }
 
   .card:hover .card-overlay{

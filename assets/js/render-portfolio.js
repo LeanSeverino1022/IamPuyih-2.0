@@ -61,8 +61,8 @@ if (typeof myPortfolio === 'undefined') {
             class: [], //custom class
             img: 'images/gallery/dragToScroll.jpg',
             actionLinks: {
-                "View Online" : "https://leanseverino1022.github.io/dragToScroll/",
-                "View source on Github" : "https://github.com/LeanSeverino1022/dragToScroll"
+                "Live" : "https://leanseverino1022.github.io/dragToScroll/",
+                "View on Github" : "https://github.com/LeanSeverino1022/dragToScroll"
             }
         },
         {
@@ -82,8 +82,21 @@ if (typeof myPortfolio === 'undefined') {
             img: 'images/gallery/search-filter-react.png',
             actionLinks: {
                 // {[name of the button] : [link]}
-                "View Online" : "https://leanseverino1022.github.io/search-and-filter-with-react/",
-                "View Source on Github" : "https://github.com/LeanSeverino1022/search-and-filter-with-react"
+                "Live" : "https://leanseverino1022.github.io/search-and-filter-with-react/",
+                "View on Github" : "https://github.com/LeanSeverino1022/search-and-filter-with-react"
+            }
+
+        },
+
+        {
+            title: 'Freecodecamp solutions converter',
+            description:'When FCC students download the curriculum solutions, they get a .json file with content that is not very readable. I created this tool to solve that problem',
+            class: [], //custom class
+            img: 'images/gallery/fcc-sol-converter.jpg',
+            actionLinks: {
+                // {[name of the button] : [link]}
+                "Live" : "https://fcc-solution-parser.herokuapp.com/",
+                "View on Github" : "https://github.com/LeanSeverino1022/freecodecamp-solution-parser"
             }
 
         },
