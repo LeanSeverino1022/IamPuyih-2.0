@@ -5,17 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Clothing Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        body {
-            background: #1B1F23;
-            color: #fff;
-            padding-top: 20px;
+
+        html {
+            font-size: 16px;
         }
-        video { margin: 0 auto; width: 600px; max-width: 100%; }
-        .video-container { text-align: center; }
+
+        body {
+            background: #fff;
+            color: #000;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            font-size: .8rem;
+        }
+
+        button.back {
+            background: #000;
+            color: #fff;
+            /* border-radius: 50px; */
+            padding: 0;
+            transition: .25s;
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: auto;
+            width: 50px;
+        }
+
+        @media(min-width:481px) {
+            button.back {
+                top: 10px;
+                left: 10px;
+                width: 100px;
+            }
+        }
+
+        button:hover {
+            transform: translate(3px, -3px);
+        }
+
+        video {
+            margin: 3.5rem auto; 
+            width: 100%;
+            /* max-width: 768px;  */
+            height: auto;
+            border: 1px solid #000;
+            box-shadow: 3px 3px #000;
+        }
+
+        @media(min-width: 768px) {
+            body {
+                font-size: 1rem;
+            }
+
+            video {
+                width: 60%;
+            }
+        }
+
+        @media(min-width: 1280px) {
+            body {
+                font-size: 1.2rem;
+            }
+        }
+
+        .video-container {
+            text-align: center;
+        }
+
         .about > p{ 
-            font-size: 18px;
             max-width: 600px;
             text-align: center;
             margin: 0 auto;
@@ -23,29 +86,36 @@
         }
 
         strong {
-            color: #F97583;
+            color: #d11f31;
+        }
+
+        [hidden] {
+            display: none;
         }
     </style>
 
 </head>
-<body>   
+<body>
+    <!-- maybe I do not need a back button because this page is opened on a new tab and I don't want to reload the my home page again. -->
+    <!-- <button class="back"><a href="index.html">Back</a></button> -->
     <div class="video-container">
-        <video src="https://everthread.com/media/mensClothing_demo_newCopy-2.mp4" 
+        <video src="videos/et.mp4"
 
-            width="300" height="auto" 
+            width="300" height="auto"
             preload
             controls
             loop
             autoplay
             type="video/mp4"
             >
-        
+
         </video>
     </div>
     <div class="about">
-        <p> Product customization allows customers to customize products and see a live preview of their customization for a better buying experience. I've done a number of product-customization projects(living room, Kitchen, clothing, etc.) including the one in the video. My job also includes communicating with the artists and the the CEO to produce desired output.</p>
-    
-        <p><strong>NOTE</strong>: I worked only on the functionality and ALL of the product assets were provided to me by the company.</p>
+        <p>
+            I've worked with EverThread to provide online shoppers the ability to customize products and see a live preview of their customization for a better buying experience. I've worked with designers to get more than 10 product-customization projects(living room, Kitchen, clothing, etc.), including the one in the video, done.</p>
+
+        <p><strong>NOTE</strong>: I worked on the functionality/code only and not the designs. <span hidden>The company went out of business in 2019</span> </p>
         <br>
         <!-- <p>I'll publish my own sample live app with functionality anyone can play with once I can provide my own product assets </p> -->
     </div>
