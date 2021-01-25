@@ -69,10 +69,10 @@ if (typeof myPortfolio === 'undefined') {
             description:"Created a game with ImpactJS, a JavaScript Game Engine. I had to replace / remove the original assets becaue I cannot use them for my personal portfolio.",
             class: [], //custom class
             img: 'images/gallery/sinkem-game.jpg',
-            overlayMsg: 'Note: This Game was created for desktop',
+            overlayMsg: 'Note: Game not playable on mobile devices',
             actionLinks: {
-                "Play Game" : "https://puyihsdumpsite.000webhostapp.com/game/index.html",
-                "View source on Github" : "https://github.com/LeanSeverino1022/sink-Em/blob/master/README.markdown"
+                "Play Game" : "https://leanseverino1022.github.io/sink-Em/",
+                "View source on Github" : "https://github.com/LeanSeverino1022/sink-Em"
             }
         },
         {
