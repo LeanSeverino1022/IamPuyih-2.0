@@ -75,18 +75,7 @@ if (typeof myPortfolio === 'undefined') {
                 "View source on Github" : "https://github.com/LeanSeverino1022/sink-Em"
             }
         },
-        {
-            title: 'Search and Filter React Boilerplate',
-            description:'Easy to edit template for search & filter React projects.',
-            class: [], //custom class
-            img: 'images/gallery/search-filter-react.png',
-            actionLinks: {
-                // {[name of the button] : [link]}
-                "Live" : "https://leanseverino1022.github.io/search-and-filter-with-react/",
-                "View on Github" : "https://github.com/LeanSeverino1022/search-and-filter-with-react"
-            }
-
-        },
+      
 
         {
             title: 'Freecodecamp solutions converter',
@@ -97,6 +86,19 @@ if (typeof myPortfolio === 'undefined') {
                 // {[name of the button] : [link]}
                 "Live" : "https://fcc-solution-parser.herokuapp.com/",
                 "View on Github" : "https://github.com/LeanSeverino1022/freecodecamp-solution-parser"
+            }
+
+        },
+
+        {
+            title: 'Search and Filter React Boilerplate',
+            description:'Easy to edit template for search & filter React projects.',
+            class: [], //custom class
+            img: 'images/gallery/search-filter-react.png',
+            actionLinks: {
+                // {[name of the button] : [link]}
+                "Live" : "https://leanseverino1022.github.io/search-and-filter-with-react/",
+                "View on Github" : "https://github.com/LeanSeverino1022/search-and-filter-with-react"
             }
 
         },
