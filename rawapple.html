@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I want the animation job</title>
+    <style>
+
+        *,*::after, *::before {
+            box-sizing: border-box;
+        }
+         body {
+             background: #000;
+             color: #fff;
+         }
+
+         .intro {
+             margin: 0 auto;
+         }
+
+         img {
+             display: block;
+
+             margin: 0 auto;
+             opacity: 0;
+
+             animation-delay: 2s;
+             animation: fadeInAnimation ease 6s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+
+         }
+
+         h1 {
+            animation-delay: 4s;
+            animation: fadeInAnimation ease 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            opacity: 0;
+         }
+
+
+
+         @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+        .absolute-center {
+
+            margin: 0;
+            /* background: yellow; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="intro">
+        <img src="images/test.jpg">
+    </div>
+    <h1 class="absolute-center">Create this to get my first Upwork 5 star rating.</h1>
+    <section>
+
+    </section>
+
+</body>
+</html>
