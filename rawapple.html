@@ -1,52 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I want the animation job</title>
     <style>
-
-        *,*::after, *::before {
+        *,
+        *::after,
+        *::before {
             box-sizing: border-box;
         }
-         body {
-             background: #000;
-             color: #fff;
-         }
 
-         .intro {
-             margin: 0 auto;
-         }
+        html {
+            font-size: 62.5%;
+        }
 
-         img {
-             display: block;
 
-             margin: 0 auto;
-             opacity: 0;
+        body {
+            background: #000;
+            color: #fff;
+        }
 
-             animation-delay: 2s;
-             animation: fadeInAnimation ease 6s;
+        /* keep if you don't like the default color the browser gives your links */
+        a,
+        a:visited {
+            color: inherit;
+        }
+
+        .intro {
+            opacity: 0;
+            min-height: 100vh;
+
+            margin: 0 auto;
+            background-image: url(images/test.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            
+
+            animation: fadeInAnimation ease 6s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
+            animation-delay: 2s;
+        }
 
-         }
 
-         h1 {
+        h1 {
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
             animation-delay: 4s;
-            animation: fadeInAnimation ease 5s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
             opacity: 0;
             text-shadow: 2px 2px 4px #7d7b91;
             text-align: center;
-         }
+            font-size: 3rem;
+            width: 100%;
+            padding: 0 12%;
+        }
+
+        @media(min-width:768px) {
+            h1 {
+                font-size: 4rem;
+            }
+        }
 
 
 
-         @keyframes fadeInAnimation {
+        @keyframes fadeInAnimation {
             0% {
                 opacity: 0;
             }
+
             100% {
                 opacity: 1;
             }
@@ -54,28 +79,45 @@
 
 
         .absolute-center {
-
-            margin: 0;
-            /* background: yellow; */
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 4rem;
+
         }
 
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 5px;
 
+            width: 100%;
+            text-align: right;
+            position: fixed;
+
+        }
+
+        footer .my-email {
+            display: inline-block;
+            border-bottom: 1px solid #ffffff;
+            padding: 10px 10px 5px;
+            font-size: 1.8rem;
+            text-decoration: none;
+
+        }
     </style>
 </head>
+
 <body>
 
     <div class="intro">
-        <img src="images/test.jpg">
+       
     </div>
-    <h1 class="absolute-center">I created this to get my first Upwork 5⭐ rating.</h1>
-    <section>
-
-    </section>
+    <h1 class="absolute-center">Animation Demo! <br>I created this to get my first Upwork 5⭐ rating.</h1>
+    <footer>
+        <a href="mailto:leandro@leandroseverino.com" class="my-email">leandro@leandroseverino.com</a>
+    </footer>
 
 </body>
+
 </html>
