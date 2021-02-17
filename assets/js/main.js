@@ -1,50 +1,8 @@
 ;
-// import jqueryTagcanvas from "https://cdn.skypack.dev/jquery-tagcanvas@2.9.0";
 
 
-$(document).ready(function() {
-        
-    if( ! $('#myCanvas').tagcanvas({
-       textFont: 'Impact,"Arial Black",sans-serif',
-                 textColour : '#a5a5a5',      
-      weight: true,
-                 maxSpeed : 0.05,
-                 freezeActive:true,
-                 shuffleTags:true,
-                 shape:'sphere',
-                 zoom:.8,
-                 noSelect:true,
-                 textFont:null,
-                 pinchZoom:true,
-                 freezeDecel:true,
-                 fadeIn: 3000,
-                 initial: [0.3,-0.1],
-                 depth : 1,
-                 minBrightness: 0,
-                 // weightMode: "both",
-      // weight: true,
-             
-                 shadow: "#95D03A",
-                 // shadowOffset: "[5,10]",
-                 textHeight: 24,
-     
-                  weightGradient: {
-      0:    '#f00', // red
-      0.33: '#ff0', // yellow
-      0.66: '#0f0', // green
-      1:    '#00f'  // blue
-     },
-      weightMode: 'both'
-                 
-             })) {
-             // TagCanvas failed to load
-             $('#myCanvasContainer').hide();
- 
-         }
- 
-    
-    
-   });
+
+
 
 
 
@@ -105,7 +63,7 @@ $(document).ready(function() {
             })
             .each(function() {
                 var $this = $(this);
-                
+
                  // External link? Bail.
                  if ($this.attr('href').charAt(0) != '#') return
 
@@ -501,3 +459,53 @@ function enableStickyNav($nav) {
 //         document.body.classList.remove("no-scroll");
 //     }
 // })
+
+
+
+
+/* !SPhere aniomatino */
+// import jqueryTagcanvas from "https://cdn.skypack.dev/jquery-tagcanvas@2.9.0";
+
+
+/*
+ * ||Sphere animation
+*/
+$(document).ready(() => {
+
+    if (!$('#myCanvas').tagcanvas({
+        textFont: '"Arial",sans-serif',
+        textColour: '#a5a5a5',
+        weight: true,
+        maxSpeed: 0.03,
+        shuffleTags: true,
+        shape: 'sphere',
+        zoom: .8,
+        noSelect: true,
+        noMouse: true,
+        pinchZoom: true,
+
+        fadeIn: 5000,
+        initial: [0.3, -0.1],
+        depth: 1,
+        lock: "xy", //prevents the cloud to react to the mouse
+
+        minBrightness: 0,
+        weightMode: "both",
+        weight: true,
+
+        shadow: "#fff",
+        // shadowOffset: [1,1],
+        textHeight: 24,
+
+    })) {
+        alert('x')
+        // TagCanvas failed to load
+        $('#myCanvasContainer').hide();
+
+    }
+
+});
+
+
+
+
